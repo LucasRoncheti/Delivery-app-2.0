@@ -414,7 +414,7 @@
                 </div>
                 <p id="hamburguerPreco" class="fcp_unselected">R$ 10,00</p>
             </div>
-                <p id="hamburguer_desc" class="p_ingredientes_hot_dog_unselected">Pão, bife de picanha, milho e ervilha, alface,tomate e maionese.</p><br>
+                <p id="hamburguer_desc" class="p_ingredientes_hot_dog_unselected">Pão, bife de picanha, milho e ervilha, alface,tomate e salada de maionese.</p><br>
 
             <!--X BACON-->
             <div class="inputs_com_valores">
@@ -426,7 +426,7 @@
                 </div>
                 <p id="xbaconPreco" class="fcp_unselected">R$ 13,00</p>
             </div>
-                <p id="xbacon_desc" class="p_ingredientes_hot_dog_unselected">Pão, bife de picanha,queijo,bacon, batata palha, milho e ervilha, alface,tomate e maionese.</p><br>
+                <p id="xbacon_desc" class="p_ingredientes_hot_dog_unselected">Pão, bife de picanha,queijo,bacon, batata palha, milho e ervilha, alface,tomate e salada de maionese.</p><br>
 
             <!--X EGG BACON-->
             <div class="inputs_com_valores">
@@ -455,8 +455,8 @@
             <div class="inputs_com_valores">
                 <div>
                     <div>
-                        <input type="checkbox" name="hotdog-lanches" value="X-Tudo"  id="xtudoduplo" >
-                        <label class="fcp" for="xtudoduplo"> X-Tudo</label>
+                        <input type="checkbox" name="hotdog-lanches" value="X-Tudo duplo"  id="xtudoduplo" >
+                        <label class="fcp" for="xtudoduplo"> X-Tudo Duplo</label>
                     </div>
                 </div>
                 <p id="xtudoduploPreco" class="fcp_unselected">R$ 21,00</p>
@@ -690,7 +690,7 @@
 
 
     <footer >
-        <p class="link_footer">Desenvolvido por <a href="#">Lucas Roncheti</a></p>
+        <p class="link_footer">Desenvolvido por <a target="_blank" href="https://www.instagram.com/lucasroncheti.designer/">Lucas Roncheti Designer</a></p>
     </footer>
 
     <div id="enviar_pedido2 ">
@@ -731,7 +731,7 @@
 
         
             <div onclick="button_close_checkout_order()" class="buttonX_checkout_order display_none" id="buttonX_checkoutOrder">
-            <strong>X</strong> 
+            <strong><a style="text-decoration: none;" href="#main">X</a></strong> 
             </div>
 
             <div class="container_meu_pedido display_none">
@@ -766,11 +766,13 @@
                 <button class="btn_enviar_pedido" id="enviar" onclick="enviar();">ENVIAR PEDIDO <img style="margin-left: 10px;" src="images/send_ico.png" alt=""></button>
             </section>
 
+            <div onclick="button_close()" class="display_none " id="buttonX">
+                <strong><a style="text-decoration: none;" href="#main">X</a></strong> 
+               </div>
+
 
         </div>
-        <div onclick="button_close()" class="display_none " id="buttonX">
-         <strong>X</strong> 
-        </div>
+       
 
         
     </div>

@@ -26,7 +26,7 @@
 body{
     
     background-color: var(--cor02);
-    ;
+   
     
 }
 
@@ -46,6 +46,501 @@ main{
     background-color: var(--cor02);
 
 }
+
+    /*header*/
+    header{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #6e0488;
+    
+    
+    
+    }
+    
+     .header_background_image{
+       display: none;
+       
+    } 
+    .logo_image{
+        width: 320px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 62px;
+    
+    }
+    .bottom_bar_header{
+        width: 100%;
+        height: 8px;
+        margin-top: -5px;
+        background-color: #32013e;
+        
+        
+    
+    }
+    
+    main{
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+        padding: 10% 0.5%;
+        
+        
+    }
+    .icon_products{
+        width: 35px;
+        max-height: 40px;
+        filter: invert(19%) sepia(91%) saturate(6982%) hue-rotate(286deg) brightness(59%) contrast(105%);
+    
+    }
+    .container_produtos{
+        width: 40%;
+        height: 50px;
+        margin: auto ;
+        margin-bottom: 25px;
+        background-color: var(--cor04);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
+    }
+    .container_produtos_open{
+        width: 90%;
+        height: auto;
+        margin: auto ;
+        margin-bottom: 25px;
+        background-color: var(--cor04);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* Botão que faz a div aparecer e sumir  */
+    .button_produto {
+        width: 100%;
+        height: 50px;
+        background-color: var(--cor04);
+        border-style: solid;
+        border-width: 4px 0px 0px;
+        border-color: var(--cor03);
+        border-radius: 5px 5px 0px 0px;
+        text-align: left;
+        color: var(--cor03);
+        padding:10px 14px;
+        font-family:var(--font01);
+        font-size: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    
+    /* seta do botão container produtos  */
+    .arrow{
+        height: 20px;
+        
+    }
+    .arrow_up{
+        height: 20px;
+        transform: rotate(180deg);
+    }
+    
+    h3{
+        padding: 0px 14px;
+        color: var(--cor05);
+        font-weight: 200;
+    }
+    
+    .container_checkbox{
+        padding: 6px 14px;
+    }
+    
+    .flex_colum{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inputs_com_valores{
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0px;
+        
+    }
+    .inputs_sem_valores{
+       
+        margin: 8px 0px;
+        
+    }
+    /* mergem do input das bebidas  */
+    .miB{
+        margin: 30px 0px;
+    }
+    
+    /* tamanho e cor das fontes dos inputs e preços  */
+    .fcp{
+        font-size: 1.3em;
+        color: var(--cor03);
+    
+    }
+    .fcpSalgados{
+        font-size:1.2em;
+        color: var(--cor03);
+    
+    }
+    .fcpBebidas{
+        font-size:1.1em;
+        color: var(--cor03);
+    
+    }
+    .fcp_unselected_bebidas{
+        
+        font-size: 1.1em;
+        color: var(--cor05);
+    
+    }
+    .fcp_unselected{
+        
+        font-size: 1.3em;
+        color: var(--cor05);
+    
+    }
+    
+    
+    .fcp_color{
+        color: var(--cor03);
+    }
+    .fcp_gray{
+        color: var(--cor05);
+    }
+    
+    /*margin letf to the price of the salgados*/
+    .mcs{
+        margin-left: 15px;
+    }
+    
+    .p_ingredientes_hot_dog_unselected{
+    
+        color: var(--cor05);
+    }
+    .p_ingredientes_hot_dog_selected{
+    
+        color:var(--cor03);
+    }
+    
+    .flavors_pulp{
+        margin-top: 20px;
+        text-align: center;
+    }
+    /* botão que cancela a seleção do intem  */
+    .button_cancel{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font01);
+    border: none;
+    
+    font-size: 1.1em;
+    color: var(--cor02);
+    background-color: var(--cor07);
+    
+    }
+    
+    .btn_fechar_pedido{
+    
+        width: 10%;
+        height: 50px;
+        background-color: var(--cor07);
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 4px 0px 0px;
+        border-color: rgb(178, 14, 47);
+        font-size: 1.3em;
+        color: white;
+    
+        display: flex;
+        justify-content: center;
+        padding: 10px 30px;
+    
+        margin: auto;
+        
+        margin-top: 70px;
+        
+    }
+    
+    .btn_enviar_pedido{
+    
+        width: 100%;
+        height: 50px;
+        background-color: var(--cor06);
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 4px 0px 0px;
+        border-color: green;
+        font-size: 1em;
+        color: var(--cor02);
+    
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        padding: 10px;
+        
+    
+        margin: auto;
+        
+        margin-top: 10px;
+        
+    }
+    .btn_checkout_order{
+    
+        width: 100%;
+        height: 50px;
+        background-color: var(--cor03);
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 4px 0px 0px;
+        border-color:var(--cor01);
+        font-size: 1em;
+        color: var(--cor02);
+    
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        padding: 10px;
+        
+    
+        margin: auto;
+        
+        margin-top: 10px;
+        
+    }
+    
+    .dados_entrega{
+        margin: 5px;
+        color: var(--cor04);
+    }
+    
+    .inputs_entrega{
+        width: 100%;
+        height: 50px;
+        margin: 5px auto;
+        border: none;
+        padding: 5px;
+        font-size: 1.5em;
+       
+        
+    }
+    
+    footer{
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        background-color: var(--cor02);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+       
+    }
+    footer a{
+        text-decoration: none;
+        color: rgb(72, 200, 255);
+    }
+    
+    
+    .link_footer{
+        font-size: 0.92em;
+    }
+    
+    .background_enviar{
+    
+        width: 50%;
+        height: 100%;
+        background-color: var(--cor07);
+        opacity: 87%;
+        position: absolute;
+        left: 25%;
+        
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: unset;
+        
+        
+        
+        
+        
+    }
+    
+    .container_enviar_pedido{
+        
+        width:40%;
+        height: 100%;
+        padding: 4%;
+        padding-top: 50px;
+        
+        
+       left: 30%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+       
+        position: absolute;
+        text-align: center;
+        
+        overflow: auto;
+       
+        
+        
+    }
+    
+    .container_meu_pedido{
+        width: 60%;
+        height: 90%;
+        overflow: scroll;
+        position: absolute;
+        top: 5%;
+        padding: 20px;
+        background-color: var(--cor04);
+        box-shadow: 0px 0px 6px rgba(122, 0, 106, 0.583);
+        font-size: 1.2em;
+       
+        
+       
+    
+    }
+    
+    .heght_width_meu_pedido{
+        animation-name: height_width;
+        animation-duration: 0.5s;
+       
+       
+    
+    }
+    .heght_width_meu_pedido_close{
+        animation-name: height_width_close;
+        animation-duration: 0.5s;
+       
+       
+    
+    }
+    
+    @keyframes height_width{
+    
+        0%{
+            transform: scale(0);
+        }
+      
+        85%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+       
+      
+    
+    }
+    @keyframes height_width_close{
+    
+        0%{
+            transform: scale(1.1);
+        }
+      
+        85%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(0);
+        }
+       
+        from{
+            opacity: 100%;
+        }
+        to{
+            opacity: 0%;
+        }
+    
+    }
+    
+    .textArea_meu_pedido{
+        width: 100%;
+        border-style: none;
+        overflow: scroll;
+        padding: 5px;
+        margin-top: 10px;
+        background-color: var(--cor04);
+        font-size: 1.5em;
+        
+       
+    
+    }
+    
+    /*button close page "enviar pedido"*/
+    
+    .buttonX{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--cor04);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 20px;
+        right: 10px;
+        color: var(--cor07);
+        font-size: 1.4em;
+        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
+    }
+    
+    .buttonX_checkout_order{
+    
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--cor04);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 20px;
+        left: 10px;
+        color: var(--cor03);
+        font-size: 1.4em;
+        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
+        z-index: 999;
+        
+    }
+    
+    .input_error{
+        color: yellow;
+    }
+    
+    .blur{
+        filter: blur(3px);
+    }
+    
+    .display_none{
+        display: none;
+    }
+    .display_block{
+        display: block;
+    }
+    
+    
+
+
 
 @media only screen and (max-width:760px ) {
 /*header*/
@@ -254,7 +749,6 @@ font-size: 1.1em;
 color: var(--cor02);
 background-color: var(--cor07);
 
-}
 }
 
 .btn_fechar_pedido{
@@ -532,4 +1026,7 @@ footer a{
 .display_block{
     display: block;
 }
+
+}
+
 
