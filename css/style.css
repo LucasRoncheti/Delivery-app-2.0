@@ -64,12 +64,12 @@ main{
        
     } 
     .logo_image{
-        width: 320px;
+        width: 250px;
         height: auto;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 62px;
+        top: 20px;
     
     }
     .bottom_bar_header{
@@ -105,6 +105,12 @@ main{
         border-radius: 5px;
         overflow: hidden;
         box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
+    }
+    @media only screen and (max-width:1100px ){
+        .container_produtos{
+            width: 60%;
+            
+        }
     }
     .container_produtos_open{
         width: 90%;
@@ -258,7 +264,7 @@ main{
     
     .btn_fechar_pedido{
     
-        width: 10%;
+        width: 40%;
         height: 50px;
         background-color: var(--cor07);
         border-radius: 5px;
@@ -557,6 +563,7 @@ position: relative;
     width: 100%;
     height: 200px;
     background-size: cover;
+    display: block;
    
 } 
 .logo_image{
@@ -565,7 +572,8 @@ position: relative;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 62px;
+    top: 50px;
+    
 
 }
 .bottom_bar_header{
@@ -827,7 +835,7 @@ background-color: var(--cor07);
 
 .inputs_entrega{
     width: 100%;
-    height: 30px;
+    height: 40px;
     margin: 5px auto;
     border: none;
     padding: 5px;
@@ -843,6 +851,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1em;
    
 }
 footer a{
@@ -862,7 +871,7 @@ footer a{
     background-color: var(--cor07);
     opacity: 87%;
     position: absolute;
-    transform: translateX(80%);
+    left: 0%;
     top: 50%;
     transform: translateY(-50%);
     overflow: unset;
@@ -881,7 +890,7 @@ footer a{
     padding-top: 50px;
     
     
-    transform: translateX(80%);
+   left: 0%;
     top: 50%;
     transform: translateY(-50%);
     
@@ -924,6 +933,8 @@ footer a{
    
 
 }
+
+
 
 @keyframes height_width{
 
