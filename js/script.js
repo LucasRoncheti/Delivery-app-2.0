@@ -1,6 +1,11 @@
+
+
 let shop = document.getElementById("shop")
+
 let container_checkbox = document.getElementById('container_checkbox')
 
+
+//function to generate items
 let generateAcai = () => {
     return (shop.innerHTML = shopItemsData.map((x) => {
         let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
@@ -102,7 +107,59 @@ let generateAcai = () => {
     `
     }).join(""))
 }
+
+let generatehotdog=()=>{
+    let shop2 = document.getElementById("shop2")
+    return (shop2.innerHTML = HotDogHeader.map((x)=>{
+        let { id, name,  img,desc,price,mainName,mainId } = x;
+        return `
+        <section  class="item">
+            <button onclick="show3()" class="button_produto" id="acai"><img class="icon_products" src="${img}" alt="">${mainName}<img src="images/arrow.svg" alt="" class="a3 arrow"></button>
+
+            <div id="HotDogeLanches"></div>
+        </section>
+        
+        
+        `
+
+    }).join(""))
+}
+
+
+let generatehotdogItens = ()=>{
+
+    let containerHotDog = document.getElementById('HotDogeLanches')
+    return (containerHotDog.innerHTML = HotDogItems.map((x)=>{
+        let { id,desc,price,name } = x;
+
+        return`
+   
+            <div id="${id}"  class="container_checkbox main_container">
+            <div  class="inputs_com_valores">
+                    <div>
+                        <div>
+                            <input type="checkbox" name="${name}" value="${name}" id="${name}" >
+                            <label class="fcp"  for="${name}"> ${name}</label>
+                        </div>
+                        
+                    </div>
+                        <p id="hd`+`${id}" class="fcp_unselected">R$ ${price},00</p>
+            </div>
+
+                <p id="hd01_desc" class="p_ingredientes_hot_dog_unselected">${desc}</p>
+
+        </div>
+
+        `
+
+    }).join(""))
+}
+
 generateAcai()
+generatehotdog()
+generatehotdogItens()
+
+
 
 
 
