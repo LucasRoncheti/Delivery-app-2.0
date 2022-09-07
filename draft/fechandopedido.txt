@@ -1,0 +1,83 @@
+<div id="enviar_pedido2 ">
+        <div id="bg_enviar" class="background_enviar display_none">
+        </div>
+           
+    
+           
+    
+        
+        <div id="form_enviar" class="container_enviar_pedido display_none">
+            <h3 class="dados_entrega">Dados para entrega</h3>
+            <input id="nome" class="inputs_entrega" placeholder="Nome*" type="text" required>
+            <p class="input_error" id="nome_error"></p>
+            
+            <h3 class="dados_entrega">Endereço</h3>
+            <select id="cidade" class="inputs_entrega" placeholder="Cidade" type="text">
+                <option value="Cidade">Cidade</option>
+                <option value="Marechal floriano">Marechal Floriano</option>
+                <option value="Domingos Martins">Domingos Martins</option>
+
+            </select>
+            <p class="input_error" id="cidade_error"></p>
+
+            <input id="rua" class="inputs_entrega" placeholder="Rua/N°*" type="text">
+            <p class="input_error" id="rua_error"></p>
+            
+            <input id="referencia" class="inputs_entrega" placeholder="Referência*" type="text">
+            <p class="input_error" id="referencia_error"></p>
+
+            
+
+            <h3 class="dados_entrega">Meu Pedido</h3>
+
+           
+
+            <button class="btn_checkout_order" id="checkout_order" onclick="checkout_order();">CONFERIR PEDIDO <img style="margin-left: 10px;" src="images/search_ico.png" alt=""></button>
+
+        
+            <div onclick="button_close_checkout_order()" class="buttonX_checkout_order display_none" id="buttonX_checkoutOrder">
+            <strong><a style="text-decoration: none;" href="#form_enviar">X</a></strong> 
+            </div>
+
+            <div class="container_meu_pedido display_none">
+                <p style="color:red" id="pedido_cremoso"></p>
+                <hr>
+                <p style="color:rgb(255, 157, 0)" id="pedido_tradicional"></p>
+                <hr>
+                <p style="color:rgb(0, 151, 40)" id="pedido_hotdog"></p>
+                <hr>
+                <p style="color:rgb(0, 166, 255)" id="pedido_salgados"></p>
+                <hr>
+                <p style="color:rgb(149, 0, 255)" id="pedido_bebidas"></p>
+                <hr>
+                <p style="color:rgb(255, 0, 157)" id="pedido_polpas"></p>
+            </div>
+            
+            <br>
+            <h3 class="dados_entrega">Forma de pagamento</h3>
+            <select id="forma_pagamento" class="inputs_entrega " >
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Pix">Pix</option>
+                <option value="Pic Pay">Pic Pay</option>
+                <option value="Cartão Débito">Cartão Débito</option>
+                <option value="Cartão Crédito">Cartão Crédito</option>
+
+            </select>
+
+            <textarea  id="observacoes" class="textArea_meu_pedido" placeholder="Observações" name="" id="" cols="100%" rows="4"></textarea>
+
+            <section>
+                <br>
+                <button class="btn_enviar_pedido" id="enviar" onclick="enviar();">ENVIAR PEDIDO <img style="margin-left: 10px;" src="images/send_ico.png" alt=""></button>
+            </section>
+
+            <div onclick="button_close()" class="display_none " id="buttonX">
+                <strong><a style="text-decoration: none;" href="#main">X</a></strong> 
+               </div>
+
+
+        </div>
+       
+
+        
+    </div>

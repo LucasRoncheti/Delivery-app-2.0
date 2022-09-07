@@ -1,623 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-:root{
+:root {
 
-    --cor01 : rgb(25, 19, 39);
-    --cor02 : #f0f0f0;
-    --cor03:#6e0488;
-    --cor04:#f6f6f6;
-    --cor05:#b9b9b9;
-    --cor06:rgb(0, 185, 0);
-    --cor07:rgb(242, 0, 85);
+    --cor01: rgb(25, 19, 39);
+    --cor02: #f0f0f0;
+    --cor03: #6e0488;
+    --cor04: #f6f6f6;
+    --cor05: #b9b9b9;
+    --cor06: rgb(0, 185, 0);
+    --cor07: rgb(242, 0, 85);
 
 
-    --font01:'Montserrat', sans-serif;
+    --font01: 'Montserrat', sans-serif;
 
 }
 
 
-body{
-    
-    background-color: var(--cor02);
-   
-    
-}
+body {
 
-
-.overflow-hidden{
-
-    overflow: hidden;
-}
-
-
-
-
-main{
-    width: 30%;
-   
-    margin: auto;
     background-color: var(--cor02);
 
+
 }
 
-    /*header*/
-    header{
+/*header*/
+header {
     width: 100%;
     height: 200px;
     position: relative;
     text-align: center;
     background-color: #6e0488;
-    
-    
-    
-    }
-    
-     .header_background_image{
-       display: none;
-       
-    } 
-    .logo_image{
-        width: 250px;
-        height: auto;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 20px;
-    
-    }
-    .bottom_bar_header{
-        width: 100%;
-        height: 8px;
-        margin-top: -5px;
-        background-color: #32013e;
-        
-        
-    
-    }
-    
-    main{
-        margin-top: 5px;
-        width: 100%;
-        height: 100%;
-        padding: 10% 0.5%;
-        
-        
-    }
-    .icon_products{
-        width: 35px;
-        max-height: 40px;
-        filter: invert(19%) sepia(91%) saturate(6982%) hue-rotate(286deg) brightness(59%) contrast(105%);
-    
-    }
-    .container_produtos{
-        width: 40%;
-        height: 50px;
-        margin: auto ;
-        margin-bottom: 25px;
-        background-color: var(--cor04);
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
-    }
-    @media only screen and (max-width:1100px ){
-        .container_produtos{
-            width: 60%;
-            
-        }
-    }
-    .container_produtos_open{
-        width: 90%;
-        height: auto;
-        margin: auto ;
-        margin-bottom: 25px;
-        background-color: var(--cor04);
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
-    }
-    
-    
-    
-    
-    
-    
-    
-    /* Botão que faz a div aparecer e sumir  */
-    .button_produto {
-        width: 100%;
-        height: 50px;
-        background-color: var(--cor04);
-        border-style: solid;
-        border-width: 4px 0px 0px;
-        border-color: var(--cor03);
-        border-radius: 5px 5px 0px 0px;
-        text-align: left;
-        color: var(--cor03);
-        padding:10px 14px;
-        font-family:var(--font01);
-        font-size: 1.5em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-    }
-    
-    
-    /* seta do botão container produtos  */
-    .arrow{
-        height: 20px;
-        
-    }
-    .arrow_up{
-        height: 20px;
-        transform: rotate(180deg);
-    }
-    
-    h3{
-        padding: 0px 14px;
-        color: var(--cor05);
-        font-weight: 200;
-    }
-    
-    .container_checkbox{
-        padding: 6px 14px;
-    }
-    
-    .flex_colum{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .inputs_com_valores{
-        display: flex;
-        justify-content: space-between;
-        margin: 8px 0px;
-        
-    }
-    .inputs_sem_valores{
-       
-        margin: 8px 0px;
-        
-    }
-    /* mergem do input das bebidas  */
-    .miB{
-        margin: 30px 0px;
-    }
-    
-    /* tamanho e cor das fontes dos inputs e preços  */
-    .fcp{
-        font-size: 1.3em;
-        color: var(--cor03);
-    
-    }
-    .fcpSalgados{
-        font-size:1.2em;
-        color: var(--cor03);
-    
-    }
-    .fcpBebidas{
-        font-size:1.1em;
-        color: var(--cor03);
-    
-    }
-    .fcp_unselected_bebidas{
-        
-        font-size: 1.1em;
-        color: var(--cor05);
-    
-    }
-    .fcp_unselected{
-        
-        font-size: 1.3em;
-        color: var(--cor05);
-    
-    }
-    
-    
-    .fcp_color{
-        color: var(--cor03);
-    }
-    .fcp_gray{
-        color: var(--cor05);
-    }
-    
-    /*margin letf to the price of the salgados*/
-    .mcs{
-        margin-left: 15px;
-    }
-    
-    .p_ingredientes_hot_dog_unselected{
-    
-        color: var(--cor05);
-    }
-    .p_ingredientes_hot_dog_selected{
-    
-        color:var(--cor03);
-    }
-    
-    .flavors_pulp{
-        margin-top: 20px;
-        text-align: center;
-    }
-    /* botão que cancela a seleção do intem  */
-    .button_cancel{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font01);
-    border: none;
-    
-    font-size: 1.1em;
-    color: var(--cor02);
-    background-color: var(--cor07);
-    
-    }
-    
-    .btn_fechar_pedido{
-    
-        width: 40%;
-        height: 50px;
-        background-color: var(--cor07);
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 4px 0px 0px;
-        border-color: rgb(178, 14, 47);
-        font-size: 1.3em;
-        color: white;
-    
-        display: flex;
-        justify-content: center;
-        padding: 10px 30px;
-    
-        margin: auto;
-        
-        margin-top: 70px;
-        
-    }
-    
-    .btn_enviar_pedido{
-    
-        width: 100%;
-        height: 50px;
-        background-color: var(--cor06);
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 4px 0px 0px;
-        border-color: green;
-        font-size: 1em;
-        color: var(--cor02);
-    
-        display: flex;
-        justify-content:  center;
-        align-items: center;
-        padding: 10px;
-        
-    
-        margin: auto;
-        
-        margin-top: 10px;
-        
-    }
-    .btn_checkout_order{
-    
-        width: 100%;
-        height: 50px;
-        background-color: var(--cor03);
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 4px 0px 0px;
-        border-color:var(--cor01);
-        font-size: 1em;
-        color: var(--cor02);
-    
-        display: flex;
-        justify-content:  center;
-        align-items: center;
-        padding: 10px;
-        
-    
-        margin: auto;
-        
-        margin-top: 10px;
-        
-    }
-    
-    .dados_entrega{
-        margin: 5px;
-        color: var(--cor04);
-    }
-    
-    .inputs_entrega{
-        width: 100%;
-        height: 50px;
-        margin: 5px auto;
-        border: none;
-        padding: 5px;
-        font-size: 1.5em;
-       
-        
-    }
-    
-    footer{
-        text-align: center;
-        width: 100%;
-        height: 50px;
-        background-color: var(--cor02);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.3em;
-       
-    }
-    footer a{
-        text-decoration: none;
-        color: rgb(72, 200, 255);
-    }
-    
-    
-    .link_footer{
-        font-size: 0.92em;
-    }
-    
-    .background_enviar{
-    
-        width: 50%;
-        height: 100%;
-        background-color: var(--cor07);
-        opacity: 87%;
-        position: absolute;
-        left: 25%;
-        
-        top: 50%;
-        transform: translateY(-50%);
-        overflow: unset;
-        
-        
-        
-        
-        
-    }
-    
-    .container_enviar_pedido{
-        
-        width:40%;
-        height: 100%;
-        padding: 4%;
-        padding-top: 50px;
-        
-        
-       left: 30%;
-        top: 50%;
-        transform: translateY(-50%);
-        
-       
-        position: absolute;
-        text-align: center;
-        
-        overflow: auto;
-       
-        
-        
-    }
-    
-    .container_meu_pedido{
-        width: 60%;
-        height: 90%;
-        overflow: scroll;
-        position: absolute;
-        top: 5%;
-        padding: 20px;
-        background-color: var(--cor04);
-        box-shadow: 0px 0px 6px rgba(122, 0, 106, 0.583);
-        font-size: 1.2em;
-       
-        
-       
-    
-    }
-    
-    .heght_width_meu_pedido{
-        animation-name: height_width;
-        animation-duration: 0.5s;
-       
-       
-    
-    }
-    .heght_width_meu_pedido_close{
-        animation-name: height_width_close;
-        animation-duration: 0.5s;
-       
-       
-    
-    }
-    
-    @keyframes height_width{
-    
-        0%{
-            transform: scale(0);
-        }
-      
-        85%{
-            transform: scale(1.1);
-        }
-        100%{
-            transform: scale(1);
-        }
-       
-      
-    
-    }
-    @keyframes height_width_close{
-    
-        0%{
-            transform: scale(1.1);
-        }
-      
-        85%{
-            transform: scale(1);
-        }
-        100%{
-            transform: scale(0);
-        }
-       
-        from{
-            opacity: 100%;
-        }
-        to{
-            opacity: 0%;
-        }
-    
-    }
-    
-    .textArea_meu_pedido{
-        width: 100%;
-        border-style: none;
-        overflow: scroll;
-        padding: 5px;
-        margin-top: 10px;
-        background-color: var(--cor04);
-        font-size: 1.5em;
-        
-       
-    
-    }
-    
-    /*button close page "enviar pedido"*/
-    
-    .buttonX{
-        
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: var(--cor04);
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 20px;
-        right: 10px;
-        color: var(--cor07);
-        font-size: 1.4em;
-        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
-    }
-    
-    .buttonX_checkout_order{
-    
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: var(--cor04);
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 20px;
-        left: 10px;
-        color: var(--cor03);
-        font-size: 1.4em;
-        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
-        z-index: 999;
-        
-    }
-    
-    .input_error{
-        color: yellow;
-    }
-    
-    .blur{
-        filter: blur(3px);
-    }
-    
-    .display_none{
-        display: none;
-    }
-    .display_block{
-        display: block;
-    }
-    
-    
-
-
-
-@media only screen and (max-width:760px ) {
-/*header*/
-header{
-width: 100%;
-height: 200px;
-position: relative;
 
 
 
 }
 
- .header_background_image{
+.main_container{
+    height: auto;
     width: 100%;
-    height: 200px;
-    background-size: cover;
-    display: block;
+    background-color: var(--cor04);
    
-} 
-.logo_image{
-    width: 180px;
+    
+}
+.shop{
+    
+    padding: 3%;
+    
+    
+}
+.item{
+    width: 90%;
+    margin-top: 30px;
+}
+.header_background_image {
+    display: none;
+
+}
+
+.logo_image {
+    width: 250px;
     height: auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 50px;
-    
+    top: 20px;
 
 }
-.bottom_bar_header{
+
+.bottom_bar_header {
     width: 100%;
     height: 8px;
     margin-top: -5px;
-    background-color: var(--cor03);
-    
+    background-color: #32013e;
 
 }
 
-main{
+
+
+
+
+
+
+
+main {
     margin-top: 5px;
     width: 100%;
-    height: 100%;
+    height:1000px;
     padding: 10% 0.5%;
+    background-color: var(--cor02);
     
-    
+
+
 }
-.icon_products{
+
+.icon_products {
     width: 35px;
     max-height: 40px;
     filter: invert(19%) sepia(91%) saturate(6982%) hue-rotate(286deg) brightness(59%) contrast(105%);
 
 }
-.container_produtos{
-    width: 90%;
+
+.container_produtos {
+    width: 40%;
     height: 50px;
-    margin: auto ;
+    margin: auto;
     margin-bottom: 25px;
     background-color: var(--cor04);
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
 }
-.container_produtos_open{
+
+.container_produtos_open {
     width: 90%;
     height: auto;
-    margin: auto ;
+    margin: auto;
     margin-bottom: 25px;
     background-color: var(--cor04);
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 3px 8px  rgba(0, 0, 0, 0.15);   
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -637,8 +146,8 @@ main{
     border-radius: 5px 5px 0px 0px;
     text-align: left;
     color: var(--cor03);
-    padding:10px 14px;
-    font-family:var(--font01);
+    padding: 10px 14px;
+    font-family: var(--font01);
     font-size: 1.5em;
     display: flex;
     justify-content: space-between;
@@ -648,120 +157,162 @@ main{
 
 
 /* seta do botão container produtos  */
-.arrow{
+.arrow {
     height: 20px;
-    
+
 }
-.arrow_up{
+
+.arrow_up {
     height: 20px;
     transform: rotate(180deg);
 }
 
-h3{
+h3 {
     padding: 0px 14px;
     color: var(--cor05);
     font-weight: 200;
 }
 
-.container_checkbox{
+.container_checkbox {
     padding: 6px 14px;
+    height: auto;
 }
 
-.flex_colum{
+.flex_colum {
     display: flex;
     flex-direction: column;
 }
 
-.inputs_com_valores{
+.inputs_com_valores {
     display: flex;
     justify-content: space-between;
     margin: 8px 0px;
-    
+
 }
-.inputs_sem_valores{
-   
+
+.inputs_sem_valores {
+
     margin: 8px 0px;
-    
+
 }
+
 /* mergem do input das bebidas  */
-.miB{
+.miB {
     margin: 30px 0px;
 }
 
 /* tamanho e cor das fontes dos inputs e preços  */
-.fcp{
+.fcp {
     font-size: 1.3em;
     color: var(--cor03);
 
 }
-.fcpSalgados{
-    font-size:1.2em;
+
+.fcpSalgados {
+    font-size: 1.2em;
     color: var(--cor03);
 
 }
-.fcpBebidas{
-    font-size:1.1em;
+
+.fcpBebidas {
+    font-size: 1.1em;
     color: var(--cor03);
 
 }
-.fcp_unselected_bebidas{
-    
+
+.fcp_unselected_bebidas {
+
     font-size: 1.1em;
     color: var(--cor05);
 
 }
-.fcp_unselected{
-    
+
+.fcp_unselected {
+
     font-size: 1.3em;
     color: var(--cor05);
 
 }
 
 
-.fcp_color{
+.fcp_color {
     color: var(--cor03);
 }
-.fcp_gray{
+
+.fcp_gray {
     color: var(--cor05);
 }
 
 /*margin letf to the price of the salgados*/
-.mcs{
+.mcs {
     margin-left: 15px;
 }
 
-.p_ingredientes_hot_dog_unselected{
+.p_ingredientes_hot_dog_unselected {
 
     color: var(--cor05);
 }
-.p_ingredientes_hot_dog_selected{
 
-    color:var(--cor03);
+.p_ingredientes_hot_dog_selected {
+
+    color: var(--cor03);
 }
 
-.flavors_pulp{
+.flavors_pulp {
     margin-top: 20px;
     text-align: center;
 }
-/* botão que cancela a seleção do intem  */
-.button_cancel{
-width: 100%;
-height: 40px;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: var(--font01);
-border: none;
 
-font-size: 1.1em;
-color: var(--cor02);
-background-color: var(--cor07);
+/* botão que cancela a seleção do intem  */
+.button_cancel {
+    width: 40%;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font01);
+    border: none;
+    border-radius: 5px 5px ;
+    font-size: 1.1em;
+    color: var(--cor02);
+    background-color: var(--cor07);
+   
 
 }
 
-.btn_fechar_pedido{
+.button_add_cart{
 
-    width: 90%;
+    width: 40%;
+    height: 45px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font01);
+    border: none;
+    border-radius: 5px 5px ;
+    font-size: 1.1em;
+    color: var(--cor02);
+    background-color: var(--cor06);
+
+}
+.bi-trash{
+    font-size: 1.5em;
+}
+.bi-bag-plus-fill{
+    font-size: 1.5em;
+}
+.container_buttons_add_cancel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_fechar_pedido {
+
+    width: 40%;
     height: 50px;
     background-color: var(--cor07);
     border-radius: 5px;
@@ -776,12 +327,12 @@ background-color: var(--cor07);
     padding: 10px 30px;
 
     margin: auto;
-    
+
     margin-top: 70px;
-    
+
 }
 
-.btn_enviar_pedido{
+.btn_enviar_pedido {
 
     width: 100%;
     height: 50px;
@@ -794,17 +345,18 @@ background-color: var(--cor07);
     color: var(--cor02);
 
     display: flex;
-    justify-content:  center;
+    justify-content: center;
     align-items: center;
     padding: 10px;
-    
+
 
     margin: auto;
-    
+
     margin-top: 10px;
-    
+
 }
-.btn_checkout_order{
+
+.btn_checkout_order {
 
     width: 100%;
     height: 50px;
@@ -812,38 +364,40 @@ background-color: var(--cor07);
     border-radius: 5px;
     border-style: solid;
     border-width: 4px 0px 0px;
-    border-color:var(--cor01);
+    border-color: var(--cor01);
     font-size: 1em;
     color: var(--cor02);
 
     display: flex;
-    justify-content:  center;
+    justify-content: center;
     align-items: center;
     padding: 10px;
-    
+
 
     margin: auto;
-    
+
     margin-top: 10px;
-    
+
 }
 
-.dados_entrega{
+.dados_entrega {
     margin: 5px;
     color: var(--cor04);
 }
 
-.inputs_entrega{
+.inputs_entrega {
     width: 100%;
-    height: 40px;
+    height: 50px;
     margin: 5px auto;
     border: none;
     padding: 5px;
-   
-    
+    font-size: 1.5em;
+
+
 }
 
-footer{
+footer {
+    /* position: absolute; */
     text-align: center;
     width: 100%;
     height: 50px;
@@ -851,61 +405,64 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1em;
-   
+    font-size: 1.3em;
+    bottom: 0PX;
+
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: rgb(72, 200, 255);
 }
 
 
-.link_footer{
+.link_footer {
     font-size: 0.92em;
 }
 
-.background_enviar{
+.background_enviar {
 
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: var(--cor07);
     opacity: 87%;
     position: absolute;
-    left: 0%;
+    left: 25%;
+
     top: 50%;
     transform: translateY(-50%);
     overflow: unset;
-    
-    
-    
-    
-    
+
+
+
+
+
 }
 
-.container_enviar_pedido{
-    
-    width:100%;
+.container_enviar_pedido {
+
+    width: 40%;
     height: 100%;
     padding: 4%;
     padding-top: 50px;
-    
-    
-   left: 0%;
+
+
+    left: 30%;
     top: 50%;
     transform: translateY(-50%);
-    
-   
+
+
     position: absolute;
     text-align: center;
-    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.218);
+
     overflow: auto;
-   
-    
-    
+
+
+
 }
 
-.container_meu_pedido{
-    width: 90%;
+.container_meu_pedido {
+    width: 60%;
     height: 90%;
     overflow: scroll;
     position: absolute;
@@ -913,83 +470,88 @@ footer a{
     padding: 20px;
     background-color: var(--cor04);
     box-shadow: 0px 0px 6px rgba(122, 0, 106, 0.583);
-   
-    
-   
+    font-size: 1.2em;
+
+
+
 
 }
 
-.heght_width_meu_pedido{
+.heght_width_meu_pedido {
     animation-name: height_width;
     animation-duration: 0.5s;
-   
-   
+
+
 
 }
-.heght_width_meu_pedido_close{
+
+.heght_width_meu_pedido_close {
     animation-name: height_width_close;
     animation-duration: 0.5s;
-   
-   
+
+
 
 }
 
+@keyframes height_width {
 
-
-@keyframes height_width{
-
-    0%{
+    0% {
         transform: scale(0);
     }
-  
-    85%{
+
+    85% {
         transform: scale(1.1);
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
-   
-  
+
+
 
 }
-@keyframes height_width_close{
 
-    0%{
+@keyframes height_width_close {
+
+    0% {
         transform: scale(1.1);
     }
-  
-    85%{
+
+    85% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(0);
     }
-   
-    from{
+
+    from {
         opacity: 100%;
     }
-    to{
+
+    to {
         opacity: 0%;
     }
 
 }
 
-.textArea_meu_pedido{
+.textArea_meu_pedido {
     width: 100%;
     border-style: none;
     overflow: scroll;
     padding: 5px;
     margin-top: 10px;
     background-color: var(--cor04);
-    
-   
+    font-size: 1.5em;
+
+
 
 }
 
 /*button close page "enviar pedido"*/
 
-.buttonX{
-    
+.buttonX {
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -998,14 +560,14 @@ footer a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 10px;
+    top: 20px;
     right: 10px;
     color: var(--cor07);
     font-size: 1.4em;
     box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
 }
 
-.buttonX_checkout_order{
+.buttonX_checkout_order {
 
     width: 50px;
     height: 50px;
@@ -1015,29 +577,566 @@ footer a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 10px;
+    top: 20px;
     left: 10px;
     color: var(--cor03);
     font-size: 1.4em;
     box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
     z-index: 999;
+
 }
 
-.input_error{
+.input_error {
     color: yellow;
 }
 
-.blur{
+.blur {
     filter: blur(3px);
 }
 
-.display_none{
+.display_none {
     display: none;
 }
-.display_block{
+
+.display_block {
     display: block;
 }
 
-}
+
+    @media only screen and (max-width:1100px) {
+        .container_produtos {
+            width: 60%;
+
+        }
+    }
 
 
+        @media only screen and (max-width:760px) {
+
+            /*header*/
+            header {
+                width: 100%;
+                height: 200px;
+                position: relative;
+
+
+
+            }
+
+            .header_background_image {
+                width: 100%;
+                height: 200px;
+                background-size: cover;
+                display: block;
+
+            }
+
+            .logo_image {
+                width: 180px;
+                height: auto;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 50px;
+
+
+            }
+
+            .bottom_bar_header {
+                width: 100%;
+                height: 8px;
+                margin-top: -5px;
+                background-color: var(--cor03);
+
+
+            }
+
+            main {
+                margin-top: 5px;
+                width: 100%;
+                height: 100%;
+                padding: 10% 0.5%;
+                
+
+
+            }
+
+        .item{
+            margin: auto;
+            margin-top: 30px;
+            
+        }
+
+            .icon_products {
+                width: 35px;
+                max-height: 40px;
+                filter: invert(19%) sepia(91%) saturate(6982%) hue-rotate(286deg) brightness(59%) contrast(105%);
+
+            }
+
+            .container_produtos {
+                width: 90%;
+                height: 50px;
+                margin: auto;
+                margin-bottom: 25px;
+                background-color: var(--cor04);
+                border-radius: 5px;
+                overflow: hidden;
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .container_produtos_open {
+                width: 90%;
+                height: auto;
+                margin: auto;
+                margin-bottom: 25px;
+                background-color: var(--cor04);
+                border-radius: 5px;
+                overflow: hidden;
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+            }
+
+
+
+
+
+
+
+            /* Botão que faz a div aparecer e sumir  */
+            .button_produto {
+                width: 100%;
+                height: 50px;
+                background-color: var(--cor04);
+                border-style: solid;
+                border-width: 4px 0px 0px;
+                border-color: var(--cor03);
+                border-radius: 5px 5px 0px 0px;
+                text-align: left;
+                color: var(--cor03);
+                padding: 10px 14px;
+                font-family: var(--font01);
+                font-size: 1.5em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+
+            /* seta do botão container produtos  */
+            .arrow {
+                height: 20px;
+
+            }
+
+            .arrow_up {
+                height: 20px;
+                transform: rotate(180deg);
+            }
+
+            h3 {
+                padding: 0px 14px;
+                color: var(--cor05);
+                font-weight: 200;
+            }
+
+            .container_checkbox {
+                padding: 6px 14px;
+            }
+            
+
+            .flex_colum {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .inputs_com_valores {
+                display: flex;
+                justify-content: space-between;
+                margin: 8px 0px;
+
+            }
+
+            .inputs_sem_valores {
+
+                margin: 8px 0px;
+
+            }
+
+            /* mergem do input das bebidas  */
+            .miB {
+                margin: 30px 0px;
+            }
+
+            /* tamanho e cor das fontes dos inputs e preços  */
+            .fcp {
+                font-size: 1.3em;
+                color: var(--cor03);
+
+            }
+
+            .fcpSalgados {
+                font-size: 1.2em;
+                color: var(--cor03);
+
+            }
+
+            .fcpBebidas {
+                font-size: 1.1em;
+                color: var(--cor03);
+
+            }
+
+            .fcp_unselected_bebidas {
+
+                font-size: 1.1em;
+                color: var(--cor05);
+
+            }
+
+            .fcp_unselected {
+
+                font-size: 1.3em;
+                color: var(--cor05);
+
+            }
+
+
+            .fcp_color {
+                color: var(--cor03);
+            }
+
+            .fcp_gray {
+                color: var(--cor05);
+            }
+
+            /*margin letf to the price of the salgados*/
+            .mcs {
+                margin-left: 15px;
+            }
+
+            .p_ingredientes_hot_dog_unselected {
+
+                color: var(--cor05);
+            }
+
+            .p_ingredientes_hot_dog_selected {
+
+                color: var(--cor03);
+            }
+
+            .flavors_pulp {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            /* botão que cancela a seleção do intem  */
+            .button_cancel {
+                width: 50%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: var(--font01);
+                border: none;
+                
+                font-size: 100%;
+                color: var(--cor02);
+                background-color: var(--cor07);
+
+            }
+
+            .button_add_cart{
+                font-size: 90%;
+                width:50% ;
+            }
+
+            .btn_fechar_pedido {
+
+                width: 90%;
+                height: 50px;
+                background-color: var(--cor07);
+                border-radius: 5px;
+                border-style: solid;
+                border-width: 4px 0px 0px;
+                border-color: rgb(178, 14, 47);
+                font-size: 1.3em;
+                color: white;
+
+                display: flex;
+                justify-content: center;
+                padding: 10px 30px;
+
+                margin: auto;
+
+                margin-top: 70px;
+
+            }
+        
+
+            .btn_enviar_pedido {
+
+                width: 100%;
+                height: 50px;
+                background-color: var(--cor06);
+                border-radius: 5px;
+                border-style: solid;
+                border-width: 4px 0px 0px;
+                border-color: green;
+                font-size: 1em;
+                color: var(--cor02);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+
+
+                margin: auto;
+
+                margin-top: 10px;
+
+            }
+
+            .btn_checkout_order {
+
+                width: 100%;
+                height: 50px;
+                background-color: var(--cor03);
+                border-radius: 5px;
+                border-style: solid;
+                border-width: 4px 0px 0px;
+                border-color: var(--cor01);
+                font-size: 1em;
+                color: var(--cor02);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+
+
+                margin: auto;
+
+                margin-top: 10px;
+
+            }
+
+            .dados_entrega {
+                margin: 5px;
+                color: var(--cor04);
+            }
+
+            .inputs_entrega {
+                width: 100%;
+                height: 40px;
+                margin: 5px auto;
+                border: none;
+                padding: 5px;
+
+
+            }
+
+            footer {
+                text-align: center;
+                width: 100%;
+                height: 50px;
+                background-color: var(--cor02);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1em;
+
+            }
+
+            footer a {
+                text-decoration: none;
+                color: rgb(72, 200, 255);
+            }
+
+
+            .link_footer {
+                font-size: 0.92em;
+            }
+
+            .background_enviar {
+
+                width: 100%;
+                height: 100%;
+                background-color: var(--cor07);
+                opacity: 87%;
+                position: absolute;
+                left: 0%;
+                top: 50%;
+                transform: translateY(-50%);
+                overflow: unset;
+
+
+
+
+
+            }
+
+            .container_enviar_pedido {
+
+                width: 100%;
+                height: 100%;
+                padding: 4%;
+                padding-top: 50px;
+
+
+                left: 0%;
+                top: 50%;
+                transform: translateY(-50%);
+
+
+                position: absolute;
+                text-align: center;
+                box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.218);
+                overflow: auto;
+
+
+
+            }
+
+            .container_meu_pedido {
+                width: 90%;
+                height: 90%;
+                overflow: scroll;
+                position: absolute;
+                top: 5%;
+                padding: 20px;
+                background-color: var(--cor04);
+                box-shadow: 0px 0px 6px rgba(122, 0, 106, 0.583);
+
+
+
+
+            }
+
+            .heght_width_meu_pedido {
+                animation-name: height_width;
+                animation-duration: 0.5s;
+
+
+
+            }
+
+            .heght_width_meu_pedido_close {
+                animation-name: height_width_close;
+                animation-duration: 0.5s;
+
+
+
+            }
+
+
+
+            @keyframes height_width {
+
+                0% {
+                    transform: scale(0);
+                }
+
+                85% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+
+
+
+            }
+
+            @keyframes height_width_close {
+
+                0% {
+                    transform: scale(1.1);
+                }
+
+                85% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(0);
+                }
+
+                from {
+                    opacity: 100%;
+                }
+
+                to {
+                    opacity: 0%;
+                }
+
+            }
+
+            .textArea_meu_pedido {
+                width: 100%;
+                border-style: none;
+                overflow: scroll;
+                padding: 5px;
+                margin-top: 10px;
+                background-color: var(--cor04);
+
+
+
+            }
+
+            /*button close page "enviar pedido"*/
+
+            .buttonX {
+
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: var(--cor04);
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 10px;
+                right: 10px;
+                color: var(--cor07);
+                font-size: 1.4em;
+                box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
+            }
+
+            .buttonX_checkout_order {
+
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: var(--cor04);
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 10px;
+                left: 10px;
+                color: var(--cor03);
+                font-size: 1.4em;
+                box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.182);
+                z-index: 999;
+            }
+
+            .input_error {
+                color: yellow;
+            }
+
+            .blur {
+                filter: blur(3px);
+            }
+
+            .display_none {
+                display: none;
+            }
+
+            .display_block {
+                display: block;
+            }
+
+        }
