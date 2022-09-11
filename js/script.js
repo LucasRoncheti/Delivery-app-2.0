@@ -1,12 +1,7 @@
 
-
-let shop = document.getElementById("shop")
-
-let container_checkbox = document.getElementById('container_checkbox')
-
-
 //function to generate items
 let generateAcai = () => {
+    let shop = document.getElementById("shop")
     return (shop.innerHTML = shopItemsData.map((x) => {
         let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
 
@@ -108,9 +103,10 @@ let generateAcai = () => {
     }).join(""))
 }
 
-let generatehotdog=()=>{
+//hot dog
+let generatehotdogSection=()=>{
     let shop2 = document.getElementById("shop2")
-    return (shop2.innerHTML = HotDogHeader.map((x)=>{
+    return (shop2.innerHTML = hotDogHeader.map((x)=>{
         let { id, name,  img,desc,price,mainName,mainId } = x;
         return `
         <section  class="item">
@@ -126,38 +122,171 @@ let generatehotdog=()=>{
 }
 
 
-let generatehotdogItens = ()=>{
+let generatehotdogItens=()=>{
 
     let containerHotDog = document.getElementById('HotDogeLanches')
-    return (containerHotDog.innerHTML = HotDogItems.map((x)=>{
+    return (containerHotDog.innerHTML = hotDogItems.map((x)=>{
         let { id,desc,price,name } = x;
 
         return`
    
             <div id="${id}"  class="container_checkbox main_container">
-            <div  class="inputs_com_valores">
-                    <div>
+                <div  class="inputs_com_valores">
                         <div>
-                            <input type="checkbox" name="${name}" value="${name}" id="${name}" >
-                            <label class="fcp"  for="${name}"> ${name}</label>
+                            <div>
+                                <input type="checkbox" name="${name}" value="${name}" id="${name}" >
+                                <label class="fcp"  for="${name}"> ${name}</label>
+                            </div>
+                            
                         </div>
-                        
+                            <p id="hd`+`${id}" class="fcp_unselected">R$ ${price},00</p>
+                </div>
+
+                    <p id="hd01_desc" class="p_ingredientes_hot_dog_unselected">${desc}</p>
+
+                    <div>
+                        <button>-</button>
+                        <span>0</span>
+                        <button>+</button>
                     </div>
-                        <p id="hd`+`${id}" class="fcp_unselected">R$ ${price},00</p>
+
             </div>
-
-                <p id="hd01_desc" class="p_ingredientes_hot_dog_unselected">${desc}</p>
-
-        </div>
 
         `
 
     }).join(""))
 }
 
+//salgados 
+let generateSalgadosSection =()=>{
+    let shop3 = document.getElementById('shop3')
+    return(shop3.innerHTML = salgadosHeader.map((u)=>{
+        return` 
+        <section id="container04" class="item">
+            <button onclick="show4()" class="button_produto" id="acai"><img class="icon_products" src="${u.img}" alt="">${u.mainName} <img src="images/arrow.svg" alt="" class="a4 arrow"></button>
+                <div id="shop_3_Container" class=" container_checkbox main_container ">
+
+                </div>        
+                
+            
+    </section>       
+        `
+
+    }).join(""))
+}
+
+
+let generateSalgadositems =()=>{
+    let containerSalgados = document.getElementById('shop_3_Container')
+    return(containerSalgados.innerHTML = salgadosItems.map((x)=>{
+        return`
+            <div class="inputs_sem_valores">
+                <div>
+                    <input type="checkbox" name="salgados" value="${x.name}" " id="${x.id}" >
+                    <label class="fcpSalgados" for="${x.id}">${x.name}</label>
+                </div>
+                    <p id="salg_preco01" class="mcs fcp_unselected">R$ ${x.price},00</p>
+            </div>
+        `
+    }).join(""))
+
+}
+
+//bebidas
+
+let generateBebidasSection =()=>{
+    let shop4=document.getElementById("shop4")
+    return(shop4.innerHTML = bebidasHeader.map((x)=>{
+        return`
+
+        <section id="container05" class="item">
+        <button onclick="show5()" class="button_produto" id="${x.mainId}"><img class="icon_products" src="${x.img}" alt="">${x.mainName}<img src="images/arrow.svg" alt="" class="a5 arrow"></button>
+
+            <div id="shop_4_Container" class="container_checkbox main_container">
+
+            </div>
+
+        </section>
+
+        `
+
+    }).join("") )
+
+}
+
+let generateBebidasItems =()=>{
+    let containerBebidas = document.getElementById('shop_4_Container')
+    return(containerBebidas.innerHTML =bebidasItems.map((x)=>{
+        return`
+
+            <div class="inputs_com_valores miB">
+                    
+                    <div>
+                        <input type="checkbox" name="bebidas" value="${x.name}"  id="${x.id}">
+                            <label class="fcpBebidas" for="${x.id}">${x.name}</label>
+                    </div>
+                        <p id="bdp01" class="fcp_unselected_bebidas">R$ ${x.price},00</p>
+            </div>
+        
+        `
+    }).join("") )
+}
+
+//Polpas
+let generatePolpasSection = ()=>{
+    let shop5=document.getElementById("shop5")
+    return(shop5.innerHTML = polpasHeader.map((x)=>{
+        return`
+
+        <section id="container06" class="item">
+            <button onclick="show6()" class="button_produto" id="${x.id}"><img class="icon_products" src="${x.img}" alt="">${x.mainName}<img src="images/arrow.svg" alt="" class="a6 arrow"></button>
+
+            
+
+            <div id="shop_5_Container" class="container_checkbox main_container">
+
+            </div>
+            
+            <div class=" main_container ">
+            <p class="flavors_pulp"> Abacaxi - Abacaxi com hortelã - Acerola  Caju - Goiaba - Manga - Maracujá - Morango - Limão - Graviola</p>
+            </div>
+            
+        </section>
+
+        `
+
+    }).join("") )
+}
+
+let generatePolpasItems =()=>{
+    let containerBebidas = document.getElementById('shop_5_Container')
+    return(containerBebidas.innerHTML =polpasItems.map((x)=>{
+        return`
+
+        <div class="inputs_com_valores">
+            <div>
+                <input type="checkbox" name="${x.name}" value="${x.name}"  id="${x.id}">
+                    <label class="fcp" for="polpa01">${x.name}</label>
+            </div>
+                <p id="polpa01P" class="fcp_unselected">R$ ${x.price},00</p>
+        </div>
+
+        
+        
+        `
+    }).join("") )
+}
+
+
 generateAcai()
-generatehotdog()
+generatehotdogSection()
 generatehotdogItens()
+generateSalgadosSection()
+generateSalgadositems()
+generateBebidasSection()
+generateBebidasItems()
+generatePolpasSection()
+generatePolpasItems()
 
 
 

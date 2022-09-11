@@ -47,6 +47,7 @@ header {
     width: 100%;
     background-color: var(--cor04);
    
+   
     
 }
 .shop{
@@ -259,7 +260,7 @@ h3 {
 }
 
 .flavors_pulp {
-    margin-top: 20px;
+    
     text-align: center;
 }
 
@@ -826,7 +827,7 @@ footer a {
             }
 
             .flavors_pulp {
-                margin-top: 20px;
+                
                 text-align: center;
             }
 
