@@ -1,0 +1,30 @@
+.basketSection{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0px;
+    
+    border-style: solid;
+    border-width: 3px 0px 0px 0px ;
+    border-color:  #6e0488;
+
+    background-color: rgba(255, 255, 255, 0.472);
+    backdrop-filter: blur(4px);
+}
+
+.basket{
+    width: 95%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(242, 0, 85);
+    color: white;
+    position: absolute;
+    padding: 10px;
+    
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+
+    display: flex;
+    justify-content: space-between;
+}

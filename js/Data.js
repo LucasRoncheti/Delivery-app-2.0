@@ -14,21 +14,27 @@ let shopItemsData = [
 },
 
 
-//datas from açaí tradicional
-{   img:"images/ice_cream.svg",
-    id:"at01",
-    name: "Açaí Tradicional",
-    size: ["300ml","500ml","700ml","1L", "Barca"],
-    priceSize: [12,14,17,22,27],
-    fruits:["Banana","Manga","Kiwi","Morango"],
-    complements:["Leite em pó","farofa de paçoca","M&M","Granola","Chocoball","Ovomaltine"],
-    topping:["Chocolate","Morango ","Leite Condensado"],
-    Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
-    priceAddition:[3,3,2,1],
 
-},
 
 ]
+
+let shopItemsData1 = [
+ 
+    //datas from açaí tradicional
+    {   img:"images/ice_cream.svg",
+        id:"at01",
+        name: "Açaí Tradicional",
+        size: ["300ml","500ml","700ml","1L", "Barca"],
+        priceSize: [12,14,17,22,27],
+        fruits:["Banana","Manga","Kiwi","Morango"],
+        complements:["Leite em pó","farofa de paçoca","M&M","Granola","Chocoball","Ovomaltine"],
+        topping:["Chocolate","Morango ","Leite Condensado"],
+        Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
+        priceAddition:[3,3,2,1],
+    
+    },
+    
+    ]
 
 
 //data from hot dog and hambuguers
@@ -249,12 +255,14 @@ let polpasItems = [
     {   
         id:"polpa01",
         name:"5 unid",
-        price:10
+        price:10,
+        itens:""
     },
     {   
         id:"polpa02",
         name:"8 unid",
-        price:16
+        price:16,
+        itens:" Abacaxi - Abacaxi com hortelã - Acerola  Caju - Goiaba - Manga - Maracujá - Morango - Limão - Graviola",
     },
    
    
