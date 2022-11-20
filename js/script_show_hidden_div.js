@@ -2,7 +2,7 @@
  
 let animation = '0.9s';            
      
-// função para mostrar/esconder container dos produtos
+// função para mostrar/esconder container dos produtos, comk  animaçao que contrai e abre as divs 
        
 
 function show(containerId,arrowId,topId){
