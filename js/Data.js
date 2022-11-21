@@ -85,7 +85,7 @@ let hotDogItems = [
         price:10
     },
     { 
-        id:"X-Bacon",
+        id:"XBacon",
         name:"X-Bacon",
         desc:"Pão, bife de picanha,queijo,bacon, batata palha, milho e ervilha, alface,tomate e salada de maionese.",
         price:13
