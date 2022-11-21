@@ -1,7 +1,7 @@
 
 
 //variável que armazena os itens da sacola
-let basket = JSON.parse(localStorage.getItem("data")) || []
+var basket = JSON.parse(localStorage.getItem("data")) || []
 
 // funções para aumentar e diminuir a quantidade de itens shop 
 
@@ -21,9 +21,9 @@ let  increment=(id)=>{
     search.item += 1;
   }
     
-    localStorage.setItem("data",JSON.stringify(basket))
-    update(selectedItem.id)
-    
+  update(selectedItem.id)
+  localStorage.setItem("data",JSON.stringify(basket))
+  
 }
 
 
@@ -38,8 +38,12 @@ let  decrement=(id)=>{
       search.item -= 1;
     }
 
-    localStorage.setItem("data",JSON.stringify(basket))
     update(selectedItem.id)
+
+    //remover itens "0" no local storage 
+    basket=basket.filter((x)=> x.item!==0)
+    
+    localStorage.setItem("data",JSON.stringify(basket))
 
 }
 
@@ -58,3 +62,5 @@ let calculation = ()=>{
   let cartNumber=document.getElementById("cartNumber")
   cartNumber.innerHTML= basket.map((x)=>x.item).reduce((x,y)=>x+y,0)
 }
+
+calculation()

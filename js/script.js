@@ -211,6 +211,7 @@ let generatehotdogSection=()=>{
     let shop2 = document.getElementById("shop2")
     return (shop2.innerHTML = hotDogHeader.map((x)=>{
         let { id, name,  img,desc,price,mainName,mainId } = x;
+        
         return `
         <section  class="item">
             <button onclick="showDiv2()" class="button_produto" id="hotdog"><img class="icon_products" src="${img}" alt="">${mainName}<img src="images/arrow.svg" alt="" id="arrow1" class="a3 arrow"></button>
@@ -230,6 +231,7 @@ let generatehotdogItens=()=>{
     let containerHotDog = document.getElementById('HotDogeLanches')
     return (containerHotDog.innerHTML = hotDogItems.map((x)=>{
         let { id,desc,price,name } = x;
+        let search= basket.find((x)=> x.id === id) || []
 
         return`
    
@@ -254,7 +256,7 @@ let generatehotdogItens=()=>{
 
                     <div class="container_add_rem_cart">
                         <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
-                        <span id="${id}">0</span>
+                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
                         <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
                     </div>
                     <br>
@@ -290,17 +292,19 @@ let generateSalgadosSection =()=>{
 let generateSalgadositems =()=>{
     let containerSalgados = document.getElementById('shop_3_Container')
     return(containerSalgados.innerHTML = salgadosItems.map((x)=>{
+        let {id,name,price} =x
+        let search= basket.find((x)=> x.id === id) || []
         return`
             <div class="inputs_sem_valores">
                 <div>
-                    <label class="fcpSalgados" for="${x.id}">${x.name}</label>
+                    <label class="fcpSalgados" for="${id}">${name}</label>
                 </div>
-                    <p id="salg_preco01" class="mcs fcp_unselected">R$ ${x.price},00</p>
+                    <p id="salg_preco01" class="mcs fcp_unselected">R$ ${price},00</p>
 
                     <div class="container_add_rem_cart">
-                    <button onclick="decrement(${x.id})" class="btn_add_rem_cart bcgRed">-</button>
-                        <span id="${x.id}">0</span>
-                        <button onclick="increment(${x.id})" class="btn_add_rem_cart bcgGreen">+</button>
+                    <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
+                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
+                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
                     </div>
                  <br>
                  <hr>
@@ -336,22 +340,24 @@ let generateBebidasSection =()=>{
 let generateBebidasItems =()=>{
     let containerBebidas = document.getElementById('shop_4_Container')
     return(containerBebidas.innerHTML =bebidasItems.map((x)=>{
+        let{id,name,price}=x
+        let search= basket.find((x)=> x.id === id) || []
         return`
 
             <div class="inputs_com_valores miB">
                     
                     <div>
                         
-                            <label class="fcpBebidas" for="${x.id}">${x.name}</label>
+                            <label class="fcpBebidas" for="${id}">${name}</label>
                     </div>
-                        <p id="bdp01" class="fcp_unselected_bebidas">R$ ${x.price},00</p>
+                        <p id="bdp01" class="fcp_unselected_bebidas">R$ ${price},00</p>
 
                     
             </div>
             <div class="container_add_rem_cart">
-                    <button onclick="decrement(${x.id})" class="btn_add_rem_cart bcgRed">-</button>
-                        <span id="${x.id}">0</span>
-                        <button onclick="increment(${x.id})" class="btn_add_rem_cart bcgGreen">+</button>
+                    <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
+                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
+                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
                     </div>
         </div>
         <br>
@@ -388,20 +394,32 @@ let generatePolpasSection = ()=>{
 let generatePolpasItems =()=>{
     let containerBebidas = document.getElementById('shop_5_Container')
     return(containerBebidas.innerHTML =polpasItems.map((x)=>{
+        let{name,id,price,itens}=x
+        let search= basket.find((x)=> x.id === id) || []
         return`
 
-        <div class="inputs_com_valores">
-            <div>
-                <input type="checkbox" name="${x.name}" value="${x.name}"  id="${x.id}">
-                    <label class="fcp" for="polpa01">${x.name}</label>
-            </div>
-                <p id="polpa01P" class="fcp_unselected">R$ ${x.price},00</p>
+        <div class="inputs_com_valores miB">
+                    
+        <div>
+            
+                <label class="fcpBebidas" for="${id}">${name}</label>
+        </div>
+            <p id="bdp01" class="fcp_unselected_bebidas">R$ ${price},00</p>
 
-                
+        
+            </div>
+            <div class="container_add_rem_cart">
+                    <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
+                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
+                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
+                    </div>
+            </div>
+            <br>
+            <hr>
         </div>
 
                 <div class=" main_container_polpas ">
-                <p class="flavors_pulp">${x.itens}</p>
+                <p class="flavors_pulp">${itens}</p>
                 </div>
 
         

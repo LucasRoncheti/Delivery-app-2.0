@@ -13,6 +13,10 @@
     backdrop-filter: blur(4px);
 }
 
+.basketSectionOpen{
+    height: 100%;
+}
+
 
 /* compõe to da a parte do botão  da sacola */
 .basket{
@@ -26,7 +30,7 @@
     padding: 10px;
     
     left: 50%;
-    bottom: 50%;
+    bottom: 33px;
     transform: translate(-50%,50%);
 
     display: flex;
