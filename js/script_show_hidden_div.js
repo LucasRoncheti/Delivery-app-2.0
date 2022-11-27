@@ -25,8 +25,7 @@ function show(containerId,arrowId,topId){
                      container01.scrollIntoView({behavior:'smooth'});
                      
                }
- 
-               
+    
                
         }
         else{

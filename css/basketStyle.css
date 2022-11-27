@@ -4,6 +4,7 @@
     height: 70px;
     position: fixed;
     bottom: 0px;
+    left:0px;
     
     border-style: solid;
     border-width: 3px 0px 0px 0px ;
@@ -24,7 +25,7 @@
     max-width: 500px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgb(242, 0, 85);
+    background-color: #f20055;
     color: white;
     position: absolute;
     padding: 10px;
@@ -56,7 +57,7 @@
 }
 
 
-/*numer de itens na sacola*/
+/*numero de itens na sacola*/
 .circleNumberBasket >p{
     position: absolute;
     left: 50%;
@@ -67,5 +68,23 @@
     font-size: 0.7em;
     font-weight: 600;
 
+}
+
+/* botão que fecha  container da sacola*/
+.butonCloseBasket{
+    width: 40px;
+    height: 30px;
+    border-radius: 20px 20px 20px 0px;
+
+    position: absolute;
+    top: -20px;
+    left: 60%;
+    transform: translate(-50%);
+    justify-content: center;
+
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #6e0488 ;
+    color:white;
 }
 
