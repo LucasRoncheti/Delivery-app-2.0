@@ -9,7 +9,7 @@ function show(containerId,arrowId,topId){
 
        let div = (containerId)
        let arrow = (arrowId)
-       let divHeight = (containerId).clientHeight;
+    
    
         if(div.style.height !=='auto'){
                

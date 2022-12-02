@@ -9,13 +9,18 @@ var basket = JSON.parse(localStorage.getItem("data")) || []
 let  increment=(id)=>{
     
 
-    let selectedItem = id;
-    let search = basket.find((x) => x.id === selectedItem.id);
+    let selectedItem =id
+  
 
-  if (search === undefined) {
+    
+    let search = basket.find((x) => x.id === selectedItem.id);
+    
+
+  if (search  === undefined) {
     basket.push({
       id: selectedItem.id,
       item: 1,
+      
     });
   } else {
     search.item += 1;
@@ -23,6 +28,7 @@ let  increment=(id)=>{
     
   update(selectedItem.id)
   localStorage.setItem("data",JSON.stringify(basket))
+  generateCartItems(hotdog,cartItens)
   
 }
 
@@ -44,13 +50,14 @@ let  decrement=(id)=>{
     basket=basket.filter((x)=> x.item!==0)
     
     localStorage.setItem("data",JSON.stringify(basket))
+    generateCartItems(hotdog,cartItens)
 
 }
 
-// função que faaz a atualização dsintens na variável Basket(sacola)
+// função que fazer a atualização dsintens na variável Basket(sacola)
 let update =(id)=>{
     let search = basket.find((x)=> x.id === id)
-    console.log(search.item)
+    
     document.getElementById(id).innerHTML = search.item
 
     calculation()
@@ -64,3 +71,9 @@ let calculation = ()=>{
 }
 
 calculation()
+
+
+
+
+
+
