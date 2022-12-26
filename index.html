@@ -46,27 +46,6 @@
     
     
     
-        <section class="cartShop">
-            <div id="basketSection" class="basketSection">
-                
-                <div id="hotdogCart"></div>
-                <div id="salgadosCart"></div>
-                
-                <div id="basket" onclick="openBasket()" class="basket">
-                    
-                    <div class="IconBasket">
-                        <i  class="bi bi-bag-plus-fill"></i>
-                            <div class="circleNumberBasket">
-                                <i class="bi bi-circle-fill"></i>
-                                <p id="cartNumber">0</p>
-                            </div>
-                    </div>
-                    <p id="toSeeShopCart">Ver sacola</p>
-                    <p>R$ 00,00</p>
-                </div>
-
-            </div>
-        </section>
     
     
     
@@ -85,6 +64,31 @@
 
     
     
+    <section id="cartShop" class="cartShop">
+        <div id="basketSection" class="basketSection">
+            
+            <h2>Seu Pedido</h2>
+
+            <div id="hotdogCart" class="hotdogCart"></div>
+            
+            
+            <div class="sendOrder" id="sendOrder"><img src="images/send_ico.png" alt=""> </div>
+
+        </div>
+
+        <div id="basket" onclick="openBasket()" class="basket">
+                
+            <div class="IconBasket">
+                <i  class="bi bi-bag-plus-fill"></i>
+                    <div class="circleNumberBasket">
+                        <i class="bi bi-circle-fill"></i>
+                        <p id="cartNumber">0</p>
+                    </div>
+            </div>
+            <p id="toSeeShopCart">Ver sacola</p>
+            <p>R$ 00,00</p>
+        </div>
+    </section>
     
     </body>
     

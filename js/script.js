@@ -4,6 +4,8 @@ let generateAcai = () => {
     let shop = document.getElementById("shop")
     return (shop.innerHTML = shopItemsData.map((x) => {
         let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
+        
+        let search= basket.find((x)=> x.id === id) || []
 
         return `
        <div id="product-id-${id}" class="item">
@@ -90,12 +92,12 @@ let generateAcai = () => {
                     }).join("")}
 
                 </div>
-                <div class="container_buttons_add_cancel">
-                
-                <button  class="button_cancel" onclick="decrement(${id})"> <i  class="bi bi-trash"></i></button>
 
-                <button  class="button_add_cart" onclick="increment(${id})"> <i  class="bi bi-bag-plus-fill"></i> </button>
-                </div>
+                <div class="container_add_rem_cart">
+                        <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
+                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
+                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
+                    </div>
         </div>
         
     </div>
@@ -107,6 +109,7 @@ let generateAcai1 = () => {
     let shop = document.getElementById("shop1")
     return (shop.innerHTML = shopItemsData1.map((x) => {
         let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
+        let search= basket.find((x)=> x.id === id) || []
 
         return `
        <div id="product-id-${id}" class="item">
@@ -193,11 +196,11 @@ let generateAcai1 = () => {
                     }).join("")}
 
                     </div>
-                    <div class="container_buttons_add_cancel">
-                    
-                    <button  class="button_cancel" onclick="decrement(${id})"> <i  class="bi bi-trash"></i></button>
-    
-                    <button  class="button_add_cart" onclick="increment(${id})"> <i  class="bi bi-bag-plus-fill"></i> </button>
+
+                     <div class="container_add_rem_cart">
+                        <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
+                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
+                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
                     </div>
         </div>
         

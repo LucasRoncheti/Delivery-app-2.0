@@ -2,7 +2,7 @@
 .basketSection{
     width: 100%;
     height: 70px;
-    position: fixed;
+   position: fixed;
     bottom: 0px;
     left:0px;
     
@@ -10,16 +10,24 @@
     border-width: 3px 0px 0px 0px ;
     border-color:  #6e0488;
 
-    background-color: rgba(255, 255, 255, 0.472);
+    background-color: rgba(237, 237, 237, 0.818);
     backdrop-filter: blur(4px);
+
+    text-align: center;
+
+    padding-top: 70px;
 }
 
 .basketSectionOpen{
     height: 100%;
+    padding-top: 0px;
+    position: fixed;
+
+    
 }
 
 
-/* compõe to da a parte do botão  da sacola */
+/* compõe toda a parte do botão  da sacola que abre e fecha a div */
 .basket{
     width: 95%;
     max-width: 500px;
@@ -27,7 +35,7 @@
     border-radius: 10px;
     background-color: #f20055;
     color: white;
-    position: absolute;
+    position: fixed;
     padding: 10px;
     
     left: 50%;
@@ -70,21 +78,112 @@
 
 }
 
-/* botão que fecha  container da sacola*/
-.butonCloseBasket{
-    width: 40px;
-    height: 30px;
-    border-radius: 20px 20px 20px 0px;
 
-    position: absolute;
-    top: -20px;
-    left: 60%;
-    transform: translate(-50%);
-    justify-content: center;
 
-    font-size: 1.2em;
-    text-align: center;
-    background-color: #6e0488 ;
-    color:white;
+
+/* container com os itens do carrinho */
+
+
+.hotdogCart{
+    width: 92%;
+    height: 80%;
+
+    margin: auto;
+    margin-top: 10px;
+    background-color: #6e0488;
+    border-radius: 5px;
+    
+    
+    overflow: auto scroll;
+}
+.cartItem{
+    width: 97%;
+    height: 50px;
+    position: relative;
+    
+    margin: auto ;
+    margin-top: 10px;
+    padding: 5px;
+    padding-right: 10%;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.159);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color:#6e0488 ;
 }
 
+/* Imagens do item a ser pedido */
+.imgItem{
+    height: 25px;
+    filter: invert(19%) sepia(91%) saturate(6982%) hue-rotate(286deg) brightness(59%) contrast(105%);
+}
+
+
+
+/* detalhes de cada iten */
+.imgItem{
+    width: 6%;
+ 
+}
+.amount{
+    width: 7%;
+}
+.itemName{
+   
+    width: 63%;
+}
+.itemPrice{
+    width: 5%;
+}
+.totalPrice{
+    width: 5%;
+}
+
+.trashIcon{
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.191) ;
+    
+    background-image: radial-gradient(circle,#fa1c6a,#f30759,#c90349);
+
+    border-radius: 50%;
+}
+
+
+/* botão de finaliar  o pedido */
+
+.sendOrder{
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 30%;
+    left: 82%;
+    
+    border-radius: 50%;
+    margin: auto;
+   
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.274) ;
+    
+    background-image: radial-gradient(circle,#ef1360,#e30251,#bc0042);
+    
+}
+.sendOrder>img{
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    
+}
