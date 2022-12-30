@@ -12,9 +12,9 @@ var acaiCremosoSize = "" //variável com o tamanho do açaí
 //variável que armazena os itens da sacola
 var basket = JSON.parse(localStorage.getItem("data")) || []
 
+
+
 // funções para aumentar e diminuir a quantidade de itens shop 
-
-
 let  increment=(id)=>{
     
 
@@ -40,8 +40,6 @@ let  increment=(id)=>{
   
   
 }
-
-
 
 let  decrement=(id)=>{
     let selectedItem = id;
@@ -72,7 +70,7 @@ var update =(id)=>{
     CalulationAmountAllItens()
 }
 
-//função para calcular a quantidade de itens na sacola e mostrar a soma total
+//função para calcular a quantidade de itens na sacola e mostrar a soma dos demais itens 
 
 var calculation = ()=>{
  
@@ -84,12 +82,9 @@ var calculation = ()=>{
 
 
 
-
-
 ////////////////////////////////////////////
 //daqui pra baixo são os funções para o açaí 
 ////////////////////////////////////////////
-
 
 
 
@@ -155,25 +150,23 @@ var updateAcai =(id)=>{
   CalulationAmountAllItens()
 }
 
-//função para calcular a quantidade de itens na sacola e mostrar a soma total
+//função para calcular a quantidade de itens na sacola e mostrar a soma de acai escolhido 
 
 var calculationAcai = ()=>{
- let containerNumbreItens = document.getElementById('cartNumber')
-  let cartNumber= basket.map((x)=>x.item).reduce((x,y)=>x+y,0)
-  var cartNumberAcai= basketAcai.map((x)=>x.item).reduce((x,y)=>x+y,0)
-  containerNumbreItens.innerHTML= cartNumber + cartNumberAcai
+   let containerNumberItens = document.getElementById('cartNumber')
+    let cartNumber= basket.map((x)=>x.item).reduce((x,y)=>x+y,0)
+    let cartNumberAcai= basketAcai.map((x)=>x.item).reduce((x,y)=>x+y,0)
+    containerNumberItens.innerHTML= cartNumber + cartNumberAcai
  
 }
 
 
 
-
+//função para calcular a quantidade de itens na sacola e mostrar a soma total
 var CalulationAmountAllItens =()=>{
   calculationAcai()
   calculation()
   
-  //   let cartNumber=document.getElementById("cartNumber")
-  // cartNumber.innerHTML= basketAcai.map((x)=>x.item).reduce((x,y)=>x+y,0)
   }
   
   
