@@ -2,6 +2,8 @@
 
 
 let shopItemsData = [
+
+    //datas from açaí cremoso
 {   img:"images/ice_cream.svg",
     id:"ac01",
     name: "Açaí Cremoso",
@@ -13,8 +15,6 @@ let shopItemsData = [
     Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
     priceAddition:[3,3,2,1],
     
-    
-
 },
 
 
