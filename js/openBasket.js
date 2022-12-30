@@ -4,11 +4,15 @@
     var validation = false
 
     //elemento html container que contem os itens da sacola 
-    let hotdog = document.getElementById("hotdogCart")
-   
+    var containerCart = document.getElementById("containerAnotherOrders")
+    
+    //elemento html container que contem os itens do açai
+    var containerCartAcai = document.getElementById("containerAcai")
 
     // soma ds arrays em um só para usar na função GenerateCartItens
-   var cartItens = hotDogItems.concat(shopItemsData1,shopItemsData,salgadosItems,bebidasItems,polpasItems)
+   var cartItens = hotDogItems.concat(salgadosItems,bebidasItems,polpasItems)
+
+   var cartItensAcai = shopItemsData.concat(shopItemsData)
 
    
 //função que abre  e fecha a sacola(carrinho) dos itens 
@@ -41,7 +45,8 @@ let openBasket=()=>{
        
        
         
-        generateCartItems(hotdog,cartItens)
+        generateCartItems(containerCart,cartItens)
+        generateCartItemsAcai(containerCartAcai,cartItensAcai)
        
        
        
@@ -97,7 +102,7 @@ let generateCartItems = (div,product) =>{
 
 
 
-//remove os itens da sacola 
+//remove  os itens da sacola 
 
 let removeIten = (id) =>{
 
@@ -109,5 +114,96 @@ let removeIten = (id) =>{
     // localStorage.setItem("data",JSON.stringify(basket))
 
 }
+
+
+
+
+
+
+
+//verifica o checkbox com o tamanho que foi selecionado 
+var acaiOrder =()=>{
+
+    let tmn = document.getElementsByName('tamanho')
+  
+       
+    for(let i=0; i<tmn.length;i++){
+        if(tmn[i].checked){
+            
+            acaiCremosoSize = tmn[i].value
+          
+        }
+        
+    }
+
+    
+
+    switch (acaiCremosoSize){
+   
+        case "300ml":
+
+            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[0])
+            shopItemsData.push([{price:acaiCremosoPrice}])
+            console.log(shopItemsData)
+            console.log(acaiCremosoPrice)
+            break
+           
+        case "500ml":
+
+            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[1])
+            break
+        case "700ml":
+
+            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[2])
+            break
+        case "1L":
+
+            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[3])
+            break
+        case "Barca":
+
+            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[4])
+            break
+
+            
+    }
+ 
+
+        
+       
+}
+
+// gera o carrinho com os itens seecionados do açai 
+var generateCartItemsAcai = (div,product) =>{
+  if (basketAcai.lenght !==0) {
+
+      return (div.innerHTML = basketAcai.map((x) =>{
+          let {id,item} = x
+
+          
+          let search = product.find((y) => y.id === id) || [] 
+         
+         
+         
+          return`
+              
+              <div class=" cartItem">
+              <img class="imgItem" src="${search.img}">
+              <p class="amount"> ${item}</p>
+              <p class="itemName"> ${search.name}</p>
+              <p class = "itemPrice"> ${search.price}</p>
+              <p class = "totalPrice"> ${item*search.price}</p>
+              <div  class="trashIcon" onClick = "removeIten(${id})"></div>
+              </div>
+
+              `  
+         
+          
+      }).join(""))
+  }
+}
+
+
+
 
 

@@ -1,3 +1,6 @@
+
+
+
 let shopItemsData = [
 {   img:"images/ice_cream.svg",
     id:"ac01",
@@ -9,6 +12,7 @@ let shopItemsData = [
     topping:["Chocolate","Morango ","Leite Condensado"],
     Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
     priceAddition:[3,3,2,1],
+    
     
 
 },
@@ -31,6 +35,7 @@ let shopItemsData1 = [
         topping:["Chocolate","Morango ","Leite Condensado"],
         Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
         priceAddition:[3,3,2,1],
+        price:""
     
     },
     

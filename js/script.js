@@ -20,7 +20,7 @@ let generateAcai = () => {
                     return ` 
                         <div class="inputs_com_valores">
                             <div >
-                                <input type="radio" name="tamanho`+`${name}" value="${y}" id="${y}" >
+                                <input type="radio" name="tamanho" value="${y}" id="${y}" >
                                     <label class="fcp" for="${y}">${y}</label>
                             </div>
 
@@ -94,9 +94,9 @@ let generateAcai = () => {
                 </div>
 
                 <div class="container_add_rem_cart">
-                        <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
+                        <button onclick="decrementAcai(${id})" class="btn_add_rem_cart bcgRed">-</button>
                         <span id="${id}">${search.item === undefined? 0: search.item}</span>
-                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
+                        <button onclick="incrementAcai(${id})" class="btn_add_rem_cart bcgGreen">+</button>
                     </div>
         </div>
         
@@ -109,6 +109,7 @@ let generateAcai1 = () => {
     let shop = document.getElementById("shop1")
     return (shop.innerHTML = shopItemsData1.map((x) => {
         let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
+        
         let search= basket.find((x)=> x.id === id) || []
 
         return `
