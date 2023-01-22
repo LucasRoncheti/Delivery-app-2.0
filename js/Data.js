@@ -1,20 +1,23 @@
 
 
 
-let shopItemsData = [
+let acai = [
 
     //datas from açaí cremoso
 {   img:"images/ice_cream.svg",
-    id:"ac01",
-    name: "Açaí Cremoso",
+    id:["ac01","acai02"],
+    thumbnail:"images/categorie/acai.jpg",
+    mainName:"Açaí",
+    name: ["Açaí Cremoso","Açaí Tradicional"],
     size: ["300ml","500ml","700ml","1L", "Barca"],
-    priceSize: [10,12,15,20,25],
+    priceSize1: [10,12,15,20,25],
+    priceSize2:[12,14,17,22,27],
     fruits:["Banana","Manga","Kiwi","Morango"],
     complements:["Leite em pó","farofa de paçoca","M&M","Granola","Chocoball","Ovomaltine"],
     topping:["Chocolate","Morango ","Leite Condensado"],
     Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
     priceAddition:[3,3,2,1],
-    
+    price:""
 },
 
 
@@ -22,10 +25,11 @@ let shopItemsData = [
 
 ]
 
-let shopItemsData1 = [
+let acaitradicional = [
  
     //datas from açaí tradicional
     {   img:"images/ice_cream.svg",
+        thumbnail:"images/categorie/acai.jpg",
         id:"at01",
         name: "Açaí Tradicional",
         size: ["300ml","500ml","700ml","1L", "Barca"],
@@ -64,7 +68,8 @@ let hotDogItems = [
         id:"HotDogTradicional",
         name:"Hot Dog Tradicional",
         desc:"2 Salssichas, 2 ovos, queijo e presunto, fatias de bacon, milho e ervilha, Uva passas Keka, batata palha keka premium.",
-        price:10.00
+        price:10.00,
+        
     },
     { 
         img:"images/burguer.svg",
@@ -146,17 +151,20 @@ let salgadosItems = [
     {    img:"images/pastel.svg",
         id:"esfirraDefrango",
         name:"Esfirra de frango com requeijão",
-        price:5
+        price:5,
+        thumbnail:"images/categorie/salgados.jpg",
     },
     {    img:"images/pastel.svg",
         id:"esfirraDeQueijoepresunto",
         name:"Esfirra de Queijo e Presunto",
-        price:5
+        price:5,
+        thumbnail:"images/categorie/salgados.jpg",
     },
     {    img:"images/pastel.svg",
         id:"Bauru",
         name:"Bauru",
-        price:5
+        price:5,
+        thumbnail:"images/categorie/salgados.jpg",
     },
 ]
 

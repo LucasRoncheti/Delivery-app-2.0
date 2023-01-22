@@ -1,214 +1,43 @@
 
 //function to generate items
 let generateAcai = () => {
-    let shop = document.getElementById("shop")
-    return (shop.innerHTML = shopItemsData.map((x) => {
-        let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
-        
-        let search= basket.find((x)=> x.id === id) || []
-
-        return `
-       <div id="product-id-${id}" class="item">
-       
-                <button onclick="showDiv()" class="button_produto" id="acai"> <img class="icon_products" src="${img}" alt=""> ${name} <img src="images/arrow.svg" alt="" class="arrow" id="arrow3"></button>
-
-            <div id="main-container2" class = "main_container">
-                <h3 >Escolha o tamanho</h3>
-                <div class="container_checkbox">
-
-                    ${size.map((y,index) => {
-                    return ` 
-                        <div class="inputs_com_valores">
-                            <div >
-                                <input type="radio" name="tamanho" value="${y}" id="${y}" >
-                                    <label class="fcp" for="${y}">${y}</label>
-                            </div>
-
-                            <p id="${priceSize[index]}" class="fcp_unselected" >R$ ${priceSize[index]}</p>
-
-                        </div>`
-
-                    }).join("")}
-
-                </div>
-
-                <H3>Escolha as frutras</h3>
-                <div id="fruits`+`${name}" class="container_checkbox fcp ">
-
-                    ${fruits.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="checkbox" value=" ${z}" " name="fruits`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha o Complementos</h3>
-                <div id="complements`+`${name}" class="container_checkbox fcp ">
-
-                    ${complements.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="checkbox" value=" ${z}" " name="complements`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha a cobertura</h3>
-                <div id="topping`+`${name}" class="container_checkbox fcp ">
-
-                    ${topping.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="radio" value=" ${z}" " name="topping`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha a Acréscimo</h3>
-                <div class="container_checkbox">
-
-                    ${Addition.map((y,index) => {
-                    return ` 
-                        <div class="inputs_com_valores">
-                            <div >
-                                <input type="checkbox" name="tamanho`+`${name}" value="${y}" id="${y}" >
-                                    <label class="fcp" for="${y}">${y}</label>
-                            </div>
-
-                            <p id="${priceAddition[index]}" class="fcp_unselected" >R$ ${priceAddition[index]}</p>
-
-                        </div>`
-
-                    }).join("")}
-
-                </div>
-
-                <div class="container_add_rem_cart">
-                        <button onclick="decrementAcai(${id})" class="btn_add_rem_cart bcgRed">-</button>
-                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
-                        <button onclick="incrementAcai(${id})" class="btn_add_rem_cart bcgGreen">+</button>
-                    </div>
-        </div>
-        
-    </div>
-    `
-    }).join(""))
-}
-//function to generate items
-let generateAcai1 = () => {
     let shop = document.getElementById("shop1")
-    return (shop.innerHTML = shopItemsData1.map((x) => {
-        let { id, name, size, priceAddition, priceSize, fruits, complements, topping, Addition, img } = x;
+    return (shop.innerHTML = acai.map((x,index) => {
+        let { id, name, mainName, img } = x;
         
         let search= basket.find((x)=> x.id === id) || []
 
         return `
-       <div id="product-id-${id}" class="item">
+       <div id="product-id-${id[index]}" class="item">
        
-                <button onclick="showDiv1()" class="button_produto" id="acai1"> <img class="icon_products" src="${img}" alt=""> ${name} <img src="images/arrow.svg" alt="" class="arrow" id="arrow2"></button>
+                <button onclick="showDiv()" class="button_produto" id="acai"> <img class="icon_products" src="${img}" alt=""> ${mainName} <img src="images/arrow.svg" alt="" class="arrow" id="arrow3"></button>
 
-            <div id="main-container1" class = "main_container">
-                <h3 >Escolha o tamanho</h3>
-                <div class="container_checkbox">
+                <div id="main-container2" class = "main_container">
 
-                    ${size.map((y,index) => {
-                    return ` 
-                        <div class="inputs_com_valores">
-                            <div >
-                                <input type="radio" name="tamanho`+`${name}" value="${y}" id="${y}" >
-                                    <label class="fcp" for="${y}">${y}</label>
-                            </div>
+                        <div id="containerAcaiComplements" class="containerAcaiComplements">
 
-                            <p id="${priceSize[index]}" class="fcp_unselected" >R$ ${priceSize[index]}</p>
-
-                        </div>`
-
-                    }).join("")}
-
-                </div>
-
-                <H3>Escolha as frutras</h3>
-                <div id="fruits`+`${name}" class="container_checkbox fcp ">
-
-                    ${fruits.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="checkbox" value=" ${z}" " name="fruits`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
                         </div>
-                    `
-                    }).join("")}
+                        <div class="containerImgAcai">
                     
-                </div>
-
-                <H3>Escolha o Complementos</h3>
-                <div id="complements`+`${name}" class="container_checkbox fcp ">
-
-                    ${complements.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="checkbox" value=" ${z}" " name="complements`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
+                        <div class="acaiDetailsCup"><p id="acaiType">Acaí Cremoso</p></div>
+    
+                        <img class="imgAcaiType" src="images/acaiAssets/copoAcai.png" alt="">
+                        
                     
-                </div>
-
-                <H3>Escolha a cobertura</h3>
-                <div id="topping`+`${name}" class="container_checkbox fcp ">
-
-                    ${topping.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="radio" value=" ${z}" " name="topping`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha a Acréscimo</h3>
-                <div class="container_checkbox">
-
-                    ${Addition.map((y,index) => {
-                    return ` 
-                        <div class="inputs_com_valores">
-                            <div >
-                                <input type="checkbox" name="tamanho`+`${name}" value="${y}" id="${y}" >
-                                    <label class="fcp" for="${y}">${y}</label>
-                            </div>
-
-                            <p id="${priceAddition[index]}" class="fcp_unselected" >R$ ${priceAddition[index]}</p>
-
-                        </div>`
-
-                    }).join("")}
-
                     </div>
-
-                     <div class="container_add_rem_cart">
-                        <button onclick="decrement(${id})" class="btn_add_rem_cart bcgRed">-</button>
-                        <span id="${id}">${search.item === undefined? 0: search.item}</span>
-                        <button onclick="increment(${id})" class="btn_add_rem_cart bcgGreen">+</button>
-                    </div>
+                   
+                    
+                    <button class="nextButton">Próximo <i class="bi bi-caret-right"></i></button>
+               
+                 </div>
+            
         </div>
-        
-    </div>
     `
     }).join(""))
 }
+
+
+
 
 //hot dog
 let generatehotdogSection=()=>{
@@ -434,7 +263,6 @@ let generatePolpasItems =()=>{
 
 
 generateAcai()
-generateAcai1()
 generatehotdogSection()
 generatehotdogItens()
 generateSalgadosSection()

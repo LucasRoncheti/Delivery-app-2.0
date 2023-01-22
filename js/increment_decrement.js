@@ -113,6 +113,7 @@ let  incrementAcai=(id)=>{
   
   updateAcai(selectedItem.id)
   localStorage.setItem("dataAcai",JSON.stringify(basketAcai))
+  
   generateCartItemsAcai(containerCartAcai,cartItens)
  
   

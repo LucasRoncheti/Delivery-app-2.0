@@ -1,0 +1,85 @@
+
+:root {
+
+    --cor01: rgb(25, 19, 39);
+    --cor02: #f0f0f0;
+    --cor03: #6e0488;
+    --cor04: #f6f6f6;
+    --cor05: #b9b9b9;
+    --cor06: rgb(0, 185, 0);
+    --cor07: rgb(242, 0, 85);
+
+
+    --font01: 'Montserrat', sans-serif;
+
+}
+/* aqui estão o css do container onde são selecionados os complementos dos açaís*/
+
+.containerAcaiComplements{
+    width: 90%;
+    height: 100px;
+    margin: auto;
+   margin-top: 5%;
+   
+    border-radius: 10px;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: relative;
+   
+    background-color: var(--cor02);
+
+}
+
+.selectSizeAcai{
+    width: 90%;
+    height: 30px;
+   
+    text-align: center;
+    border-radius: 10px;
+    border-color: var(--cor03);
+
+}
+
+.containerImgAcai{
+width: 100%;
+height: 350px;
+position: relative;
+}
+
+.acaiDetailsCup{
+ 
+
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ z-index: 1;   
+ text-align: center; 
+ padding-top: 50px;
+
+}
+
+.imgAcaiType{
+    max-height: 330px;
+    position: absolute;
+   
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.nextButton{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: var(--cor06);
+    margin: 5%;
+   
+    
+
+}

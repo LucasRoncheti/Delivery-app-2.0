@@ -1,3 +1,19 @@
+
+:root {
+
+    --cor01: rgb(25, 19, 39);
+    --cor02: #f0f0f0;
+    --cor03: #6e0488;
+    --cor04: #f6f6f6;
+    --cor05: #b9b9b9;
+    --cor06: rgb(0, 185, 0);
+    --cor07: rgb(242, 0, 85);
+
+
+    --font01: 'Montserrat', sans-serif;
+
+}
+
 /* section que compõe toda a parte da sacola  */
 .basketSection{
     width: 100%;
@@ -10,7 +26,7 @@
     border-width: 3px 0px 0px 0px ;
     border-color:  #6e0488;
 
-    background-color: rgba(237, 237, 237, 0.818);
+    background-color: rgba(255, 255, 255, 0.929);
     backdrop-filter: blur(4px);
 
     text-align: center;
@@ -90,75 +106,111 @@
 
     margin: auto;
     margin-top: 10px;
-    background-color: #6e0488;
+    background-color: #6e048800;
     border-radius: 5px;
     
-    
+    background-color: #d8d8d882;
     overflow: auto scroll;
 }
 .cartItem{
     width: 97%;
-    height: 50px;
+    height: 100px;
     position: relative;
     
     margin: auto ;
     margin-top: 10px;
     padding: 5px;
-    padding-right: 10%;
+    
     background-color:white;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.159);
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.159);
 
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 
     color:#6e0488 ;
 }
 
-/* Imagens do item a ser pedido */
-.imgItem{
-    height: 25px;
-    filter: invert(19%) sepia(91%) saturate(6982%) hue-rotate(286deg) brightness(59%) contrast(105%);
+/*css da tag details do pedido do açai*/
+.complementsAcaiOrder{
+    width: 97%;
+    height: auto;
+    text-align: left;
+    background-color: var(--cor03);
+    margin: auto;
+    z-index: 9999;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+
 }
+
+.imgAmountCartIten{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.NamePrinceCartIten{
+    width: 65%;
+    height: 100%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
 
 
 
 /* detalhes de cada iten */
 .imgItem{
-    width: 6%;
+    width: 90px;
  
 }
 .amount{
-    width: 7%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor03);
+    color: white;
+    font-size: 1.3em;
 }
 .itemName{
    
-    width: 63%;
+    width: 100%;
 }
-.itemPrice{
-    width: 5%;
-}
-.totalPrice{
-    width: 5%;
+
+.totalPrice, .itemPrice{
+    width: 100%;
+    font-size: 0.8em;
 }
 
 .trashIcon{
     width: 30px;
-    height: 30px;
+    height: 100%;
 
-    position: absolute;
-    left: 90%;
-    top: 50%;
-    transform: translateY(-50%);
     
-    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.191) ;
     
-    background-image: radial-gradient(circle,#fa1c6a,#f30759,#c90349);
+    
+    
+    background-color: var(--cor07);
 
-    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
+.priceIten{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 /* botão de finaliar  o pedido */
 
@@ -181,6 +233,7 @@
 .sendOrder>img{
     width: 40px;
     position: absolute;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);

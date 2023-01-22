@@ -47,7 +47,7 @@ header {
     width: 100%;
     background-color: var(--cor04);
     overflow: hidden;
-   
+   position: relative;
    
     
 }
@@ -1012,6 +1012,7 @@ footer a {
                 justify-content: center;
                 align-items: center;
                 font-size: 1em;
+                
 
             }
 

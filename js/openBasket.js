@@ -12,7 +12,7 @@
     // soma ds arrays em um só para usar na função GenerateCartItens
    var cartItens = hotDogItems.concat(salgadosItems,bebidasItems,polpasItems)
 
-   var cartItensAcai = shopItemsData.concat(shopItemsData)
+  
 
    
 //função que abre  e fecha a sacola(carrinho) dos itens 
@@ -21,7 +21,7 @@ let openBasket=()=>{
     let basketOpen = document.getElementById("basketSection")
     let body= document.getElementById('body')
     let basketDiv = document.getElementById('basket')
-    let sendOrder = document.getElementById('sendOrder')
+    // let sendOrder = document.getElementById('sendOrder')
 
     
 
@@ -32,7 +32,7 @@ let openBasket=()=>{
         document.getElementById('toSeeShopCart').innerHTML = 'Fechar Sacola'
         basketOpen.classList.add("basketSectionOpen")
         basketDiv.style.backgroundColor = 'black'
-        sendOrder.style.display = 'block'
+        // sendOrder.style.display = 'block'
         body.style.position = 'fixed'
         body.style.transition = 'all 1s'
         basketOpen.style.transition = "all 1s"
@@ -53,11 +53,11 @@ let openBasket=()=>{
         return validation = true
 
     }else{
-        
+       
         document.getElementById('toSeeShopCart').innerHTML = 'Abrir Sacola'
         basketOpen.classList.remove("basketSectionOpen")
         basketDiv.style.backgroundColor ='#f20055'
-        sendOrder.style.display = 'none'
+        // sendOrder.style.display = 'none'
         body.style.position = 'relative'
         sendOrder.style.transition = "all 1s"
         basketOpen.style.transition = "all 1s"  
@@ -85,12 +85,18 @@ let generateCartItems = (div,product) =>{
             return`
                 
                 <div class=" cartItem">
-                <img class="imgItem" src="${search.img}">
-                <p class="amount"> ${item}</p>
-                <p class="itemName"> ${search.name}</p>
-                <p class = "itemPrice"> ${search.price}</p>
-                <p class = "totalPrice"> ${item*search.price}</p>
-                <div  class="trashIcon" onClick = "removeIten(${id})"></div>
+                <div class="imgAmountCartIten">
+                    <img class="imgItem" src="${search.thumbnail}">
+                    <p class="amount"> ${item}</p>
+                </div>
+                <div class="NamePrinceCartIten">
+                    <p class="itemName"> ${search.name}</p>
+                    <div class="priceIten">
+                        <p class = "itemPrice"> Valor unit: ${search.price}</p>
+                        <p class = "totalPrice">Valor total: ${item*search.price}</p>
+                    </div>
+                </div>
+                <div  class="trashIcon" onClick = "removeIten(${id})"><i class="bi bi-trash"></i></div>
                 </div>
 
                 `  
@@ -183,18 +189,29 @@ var generateCartItemsAcai = (div,product) =>{
           
           let search = product.find((y) => y.id === id) || [] 
          
-         
+       
          
           return`
               
               <div class=" cartItem">
-              <img class="imgItem" src="${search.img}">
-              <p class="amount"> ${item}</p>
-              <p class="itemName"> ${search.name}</p>
-              <p class = "itemPrice"> ${search.price}</p>
-              <p class = "totalPrice"> ${item*search.price}</p>
-              <div  class="trashIcon" onClick = "removeIten(${id})"></div>
+                <div class="imgAmountCartIten">
+                    <img class="imgItem" src="${search.thumbnail}">
+                    <p class="amount"> ${item}</p>
+                </div>
+
+                <div class="NamePrinceCartIten">
+                    <p class="itemName"> ${search.name}</p>
+                    <div class="priceIten">
+                    <p class = "itemPrice"> Valor unit: ${search.price}</p>
+                    <p class = "totalPrice">Valor total: ${item*search.price}</p>
+                </div>
+                </div>
+              <div  class="trashIcon" onClick = "removeIten(${id})"><i class="bi bi-trash"></i></div>
               </div>
+              <details class="complementsAcaiOrder">
+              <summary>Complementos</summary>
+              <p id="hd01_desc" class="p_ingredientes_hot_dog_unselected">Os nomes dos itens solicitados estarão aqui </p>
+              </details>
 
               `  
          
