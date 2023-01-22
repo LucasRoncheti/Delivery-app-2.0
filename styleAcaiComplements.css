@@ -17,7 +17,7 @@
 
 .containerAcaiComplements{
     width: 90%;
-    height: 100px;
+    height: auto;
     margin: auto;
    margin-top: 5%;
    
@@ -34,15 +34,14 @@
 
 }
 
-.selectSizeAcai{
-    width: 90%;
-    height: 30px;
-   
-    text-align: center;
-    border-radius: 10px;
-    border-color: var(--cor03);
-
+.inputsDivAcaiComplements{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
 }
+
+/* a respeito da imagem do copo e o texto com os complementos  por cima do copo */
 
 .containerImgAcai{
 width: 100%;
@@ -71,15 +70,58 @@ position: relative;
     transform: translate(-50%,-50%);
 }
 
+
+
+/* botões de next e prev na parte do açaí */
+.buttonsNextPrev{
+    display: flex;
+    width: 100%;
+}
 .nextButton{
     width: 90%;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: white;
     background-color: var(--cor06);
     margin: 5%;
+    font-size: 1.2em;
    
-    
+}
+.prevButton{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--cor07);
+    margin: 5%;
+    font-size: 1.2em;
+   
+}
 
+
+/*css do campo que contem os iputs de tamanhos e valores do açai  */
+.inputsDivAcaiSize{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+   
+}
+
+.sizeAcaiInputs{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--cor05);
+    
+}
+.sizeAcaiInputs>input{
+    margin: 5px;
 }

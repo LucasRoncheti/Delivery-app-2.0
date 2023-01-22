@@ -19,7 +19,7 @@ let generateAcai = () => {
                         </div>
                         <div class="containerImgAcai">
                     
-                        <div class="acaiDetailsCup"><p id="acaiType">Acaí Cremoso</p></div>
+                        <div class="acaiDetailsCup"><p id="acaiType"></p></div>
     
                         <img class="imgAcaiType" src="images/acaiAssets/copoAcai.png" alt="">
                         
@@ -27,7 +27,6 @@ let generateAcai = () => {
                     </div>
                    
                     
-                    <button class="nextButton">Próximo <i class="bi bi-caret-right"></i></button>
                
                  </div>
             

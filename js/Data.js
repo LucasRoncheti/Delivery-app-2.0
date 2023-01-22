@@ -9,7 +9,7 @@ let acai = [
     thumbnail:"images/categorie/acai.jpg",
     mainName:"Açaí",
     name: ["Açaí Cremoso","Açaí Tradicional"],
-    size: ["300ml","500ml","700ml","1L", "Barca"],
+    size: ["300ml","500ml","700ml","1 Litro", "Barca"],
     priceSize1: [10,12,15,20,25],
     priceSize2:[12,14,17,22,27],
     fruits:["Banana","Manga","Kiwi","Morango"],

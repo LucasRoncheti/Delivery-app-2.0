@@ -46,7 +46,7 @@ let openBasket=()=>{
        
         
         generateCartItems(containerCart,cartItens)
-        generateCartItemsAcai(containerCartAcai,cartItensAcai)
+        // generateCartItemsAcai(containerCartAcai,cartItensAcai)
        
        
        
