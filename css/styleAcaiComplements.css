@@ -58,6 +58,13 @@ position: relative;
  z-index: 1;   
  text-align: center; 
  padding-top: 50px;
+ 
+
+}
+.acaiDetailsCup > div{
+
+ margin-top: 10px;
+ font-size: 0.86em;
 
 }
 

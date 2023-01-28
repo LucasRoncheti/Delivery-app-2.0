@@ -19,7 +19,15 @@ let generateAcai = () => {
                         </div>
                         <div class="containerImgAcai">
                     
-                        <div class="acaiDetailsCup"><p id="acaiType"></p></div>
+                        <div class="acaiDetailsCup">
+                            <div> <p id="p01"></p></div>
+                            <div> <p id="p02"></p></div>
+                            <div> <p id="p03"></p></div>
+                            <div> <p id="p04"></p></div>
+                            <div> <p id="p05"></p></div>
+                            <div> <p id="p06"></p></div>
+                            
+                        </div>
     
                         <img class="imgAcaiType" src="images/acaiAssets/copoAcai.png" alt="">
                         

@@ -1,87 +1,14 @@
 []diferenciar os pedidos do açaí 
-[]fazer o preço do acaí ser diferenciado 
-[]lista dos itens selecionados 
+
+// escolhendo os pedidos do açaí 
+[] botão de limpar seleção dos complementos de acai 
+[] restrição de seleção do tipo e tamanho 
+[] animação de finalizar após confirmar o pedido no último botão  
+
 []valor total dos itens na parte sacola ser funcional 
 []
 
 
- <h3 >Escolha o tamanho</h3>
-                <div class="container_checkbox">
-
-                    ${size.map((y,index) => {
-                    return ` 
-                        <div class="inputs_com_valores">
-                            <div >
-                                <input type="radio" name="tamanho" value="${y}" id="${y}" >
-                                    <label class="fcp" for="${y}">${y}</label>
-                            </div>
-
-                            <p id="${priceSize[index]}" class="fcp_unselected" >R$ ${priceSize[index]}</p>
-
-                        </div>`
-
-                    }).join("")}
-
-                </div>
-
-                <H3>Escolha as frutras</h3>
-                <div id="fruits`+`${name}" class="container_checkbox fcp ">
-
-                    ${fruits.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="checkbox" value=" ${z}" " name="fruits`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha o Complementos</h3>
-                <div id="complements`+`${name}" class="container_checkbox fcp ">
-
-                    ${complements.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="checkbox" value=" ${z}" " name="complements`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha a cobertura</h3>
-                <div id="topping`+`${name}" class="container_checkbox fcp ">
-
-                    ${topping.map((z)=>{
-                        return `
-                        <div class="inputs_sem_valores acaicremoso">
-                        <input type="radio" value=" ${z}" " name="topping`+`${name}" id="${z}">
-                            <label for="${z}">${z}</label>
-                        </div>
-                    `
-                    }).join("")}
-                    
-                </div>
-
-                <H3>Escolha a Acréscimo</h3>
-                <div class="container_checkbox">
-
-                    ${Addition.map((y,index) => {
-                    return ` 
-                        <div class="inputs_com_valores">
-                            <div >
-                                <input type="checkbox" name="tamanho`+`${name}" value="${y}" id="${y}" >
-                                    <label class="fcp" for="${y}">${y}</label>
-                            </div>
-
-                            <p id="${priceAddition[index]}" class="fcp_unselected" >R$ ${priceAddition[index]}</p>
-
-                        </div>`
-
-                    }).join("")}
 
                 </div>
 

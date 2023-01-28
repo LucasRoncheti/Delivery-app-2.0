@@ -14,7 +14,7 @@ let acai = [
     priceSize2:[12,14,17,22,27],
     fruits:["Banana","Manga","Kiwi","Morango"],
     complements:["Leite em pó","farofa de paçoca","M&M","Granola","Chocoball","Ovomaltine"],
-    topping:["Chocolate","Morango ","Leite Condensado"],
+    topping:["Sem cobertura","Chocolate","Morango ","Leite Condensado",],
     Addition:["Nutela","Doce de leite","Tortuguita", "Paçoca",],
     priceAddition:[3,3,2,1],
     price:""

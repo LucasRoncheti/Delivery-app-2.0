@@ -1,5 +1,7 @@
 var acaiComplemetsValues = []
 
+
+// valor da escolha do tipo de acai que muda a opção de valores na seção de tamanhos 
 var acaiChoiced=""
 
 var mainContainerAcai = document.getElementById("containerAcaiComplements")
@@ -10,10 +12,13 @@ let generateAcaiType=()=>{
     
     return (mainContainerAcai.innerHTML = acai.map((x,index)=>{
         let {id,name} = x;
+       
+        
         return`
+              
                 <h3>Escolha um tipo</h3><br>
                 
-                <div  id="typeAcai" class="inputsDivAcaiComplements">   
+                <div  id="divInputs" class="inputsDivAcaiComplements">   
                     ${name.map((y)=> {
                         return`
                         <div  style="margin-top:7px">
@@ -30,6 +35,7 @@ let generateAcaiType=()=>{
         `
     }))
     
+    
 }
 
 //gera o tamanho que vai ser o copo do acaí 
@@ -43,11 +49,11 @@ let generateAcaiSize=()=>{
             return`
                     <h3>Escolha o tamanho </h3><br>
                     
-                    <div  id="sizeAcai" class="inputsDivAcaiSize">   
+                    <div  id="divInputs" class="inputsDivAcaiSize">   
                         ${size.map((y,index)=> {
                             return`
                             <div id="${y}-" class="sizeAcaiInputs" >
-                                <input  id="${y}" name="acaiSize" type="radio" value="${y}">
+                                <input onclick="acaiSizeSelected()" id="${y}" name="acaiSize" type="radio" value="${y}">
                                 <label for="${y}">${y} ->  ${priceSize1[index].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</label>
                             </div>
                             `}).join("")}
@@ -64,7 +70,7 @@ let generateAcaiSize=()=>{
             return`
             <h3>Escolha o tamanho </h3><br>
                     
-            <div  id="sizeAcai" class="inputsDivAcaiSize">   
+            <div  id="typeAcai" class="inputsDivAcaiSize">   
                 ${size.map((y,index)=> {
                     return`
                     <div id="${y}-" class="sizeAcaiInputs" >
@@ -98,10 +104,10 @@ let generateAcaiFruits=()=>{
             return`
                     <h3>Escolha as frutas </h3><br>
                     
-                    <div  id="fruitsAcai" class="inputsDivAcaiSize">   
+                    <div  id="divInputs" class="inputsDivAcaiSize">   
                         ${fruits.map((y)=> {
                             return`
-                            <div id="${y}-"  class="sizeAcaiInputs" >
+                            <div id="${y}-" onclick="acaiFruitsSelected()"  class="sizeAcaiInputs" >
                                 <input  id="${y}" name="acaiSize" type="checkbox" value="${y}">
                                 <label for="${y}"> ${y}</label>
                             </div>
@@ -131,10 +137,10 @@ let generateAcaiComplements=()=>{
             return`
                     <h3>Escolha os complementos </h3><br>
                     
-                    <div  id="fruitsAcai" class="inputsDivAcaiSize">   
+                    <div  id="divInputs" class="inputsDivAcaiSize">   
                         ${complements.map((y)=> {
                             return`
-                            <div id="${y}-" class="sizeAcaiInputs" >
+                            <div id="${y}-" onclick="acaiComplementsSelected()" class="sizeAcaiInputs" >
                                 <input  id="${y}" name="acaiSize" type="checkbox" value="${y}">
                                 <label for="${y}"> ${y}</label>
                             </div>
@@ -164,11 +170,11 @@ let generateAcaiTopping=()=>{
             return`
                     <h3>Escolha a cobertura</h3><br>
                     
-                    <div  id="fruitsAcai" class="inputsDivAcaiSize">   
+                    <div  id="divInputs" class="inputsDivAcaiSize">   
                         ${topping.map((y)=> {
                             return`
                             <div id="${y}-" class="sizeAcaiInputs" >
-                                <input  id="${y}" name="acaiSize" type="radio" value="${y}">
+                                <input onclick="acaiToppingSelected()" id="${y}" name="acaiSize" type="radio" value="${y}">
                                 <label for="${y}"> ${y}</label>
                             </div>
                             `}).join("")}
@@ -197,11 +203,11 @@ let generateAcaiAddition=()=>{
             return`
                     <h3>Que tal  um adicional?</h3><br>
                     
-                    <div  id="fruitsAcai" class="inputsDivAcaiSize">   
+                    <div  id="divInputs" class="inputsDivAcaiSize">   
                         ${Addition.map((y,index)=> {
                             return`
                             <div id="${y}-" class="sizeAcaiInputs" >
-                            <input  id="${y}" name="acaiSize" type="radio" value="${y}">
+                            <input onclick="acaiAddictionSelected()" id="${y}" name="acaiSize" type="checkbox" value="${y}">
                             <label for="${y}">${y} ->  ${priceAddition[index].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</label>
                         </div>
                             `}).join("")}
@@ -210,7 +216,7 @@ let generateAcaiAddition=()=>{
 
                     <div class="buttonsNextPrev">
                         <button onclick="generateAcaiComplements()" class="prevButton"><i class="bi bi-caret-left"></i>Voltar </button>
-                        <button onclick="generateAcaiTopping()" class="nextButton">Próximo <i class="bi bi-caret-right"></i></button>
+                        <button onclick="generateAcaiTopping()" class="nextButton">Finalizar <i class="bi bi-bag-plus"></i></i></button>
                     </div> 
             
             `
@@ -220,28 +226,7 @@ let generateAcaiAddition=()=>{
     
 }
 
-function acaiTypeSelected() {
-    //reference the div with the inputs
-    let inputTypeAcai = document.getElementById('typeAcai')
 
-    //reference all checkbox in the div
-    let chk = inputTypeAcai.getElementsByTagName('INPUT') 
-
-    // reference the div inside de cup 
-    let acaiType = document.getElementById("acaiType")
-
-    
-
-    for(var i=0; i< chk.length; i++){
-        if(chk[i].checked){
-            acaiType.innerHTML=chk[i].value
-           return acaiChoiced = chk[i].value
-            
-        }
-    }
-   
-  }
 
  generateAcaiType()
-// generateAcaiFruits()
-// generateAcaiSize()
+
