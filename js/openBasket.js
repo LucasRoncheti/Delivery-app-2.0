@@ -127,57 +127,7 @@ let removeIten = (id) =>{
 
 
 
-//verifica o checkbox com o tamanho que foi selecionado 
-var acaiOrder =()=>{
 
-    let tmn = document.getElementsByName('tamanho')
-  
-       
-    for(let i=0; i<tmn.length;i++){
-        if(tmn[i].checked){
-            
-            acaiCremosoSize = tmn[i].value
-          
-        }
-        
-    }
-
-    
-
-    switch (acaiCremosoSize){
-   
-        case "300ml":
-
-            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[0])
-            shopItemsData.push([{price:acaiCremosoPrice}])
-            console.log(shopItemsData)
-            console.log(acaiCremosoPrice)
-            break
-           
-        case "500ml":
-
-            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[1])
-            break
-        case "700ml":
-
-            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[2])
-            break
-        case "1L":
-
-            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[3])
-            break
-        case "Barca":
-
-            acaiCremosoPrice = shopItemsData.map((x)=>x.priceSize[4])
-            break
-
-            
-    }
- 
-
-        
-       
-}
 
 // gera o carrinho com os itens seecionados do açai 
 var generateCartItemsAcai = (div,product) =>{
@@ -208,6 +158,7 @@ var generateCartItemsAcai = (div,product) =>{
                 </div>
               <div  class="trashIcon" onClick = "removeIten(${id})"><i class="bi bi-trash"></i></div>
               </div>
+              
               <details class="complementsAcaiOrder">
               <summary>Complementos</summary>
               <p id="hd01_desc" class="p_ingredientes_hot_dog_unselected">Os nomes dos itens solicitados estarão aqui </p>

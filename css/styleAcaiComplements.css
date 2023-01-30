@@ -6,7 +6,7 @@
     --cor03: #6e0488;
     --cor04: #f6f6f6;
     --cor05: #b9b9b9;
-    --cor06: rgb(0, 185, 0);
+    --cor06: #00b900;
     --cor07: rgb(242, 0, 85);
 
 
@@ -108,6 +108,51 @@ position: relative;
 }
 
 
+.boxInput{
+    
+    min-width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    margin: 10px;
+    
+    border-radius: 5px;
+    margin-top:7px"
+}
+
+.boxInput > input{
+    margin: 5px;
+    display: none;
+   
+    
+}
+.boxInput>label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    color:rgb(102, 102, 102);
+    background-color: var(--cor05);
+}
+
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border: rgb(32, 173, 32);
+    border-radius: 5px;
+    background-color: var(--cor06);
+    color: var(--cor01);
+    box-shadow: 0px 0px 8px  #00b900;
+
+}
+
 /*css do campo que contem os iputs de tamanhos e valores do açai  */
 .inputsDivAcaiSize{
     display: flex;
@@ -117,18 +162,20 @@ position: relative;
    
 }
 
-.sizeAcaiInputs{
-    min-width: 240px;
+.containerAddAcaiToCart {
+    width: 100%;
+    height: auto;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    height: 30px;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--cor05);
+    overflow: hidden;
+    padding: 10px;
+    color: var(--cor06);
     
 }
-.sizeAcaiInputs>input{
-    margin: 5px;
+.containerAddAcaiToCart > img{
+   width: 100%;
+   mix-blend-mode: exclusion;
+   filter: hue-rotate(140deg) saturate(200%);
 }

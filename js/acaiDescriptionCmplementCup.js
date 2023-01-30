@@ -1,3 +1,5 @@
+
+
 // funções que pegam o vvalor selecionado no input e imprimem o valor na div do copo  açaí 
 
 function acaiTypeSelected() {
@@ -15,7 +17,8 @@ function acaiTypeSelected() {
     for(var i=0; i< chk.length; i++){
         if(chk[i].checked){
             paragraph.innerHTML=chk[i].value
-           return acaiChoiced = chk[i].value
+            acaiChoiced = chk[i].value
+            
             
         }
     }
@@ -53,7 +56,7 @@ function acaiFruitsSelected() {
     // reference the div inside de cup 
     let paragraph = document.getElementById("p03")
 
-    let fruitsName = []
+    var fruitsName = []
 
     for(var i=0; i< chk.length; i++){
         
@@ -63,9 +66,12 @@ function acaiFruitsSelected() {
            fruitsName.push(FruitName)
            paragraph.innerHTML = fruitsName.join("")
            
+          
+           
             
         }
     }
+
    
   }
 function acaiComplementsSelected() {
@@ -143,3 +149,7 @@ function acaiAddictionSelected() {
     }
    
   }
+
+  
+
+  
